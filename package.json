@@ -1,0 +1,27 @@
+{
+  "name": "yaml-validator",
+  "version": "0.1.0",
+  "description": "Validate Yaml files and enforce a given structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint -c .eslintrc.json index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paazmaya/yaml-validator.git"
+  },
+  "author": "Juga Paazmaya <paazmaya@yahoo.com> (http://www.paazmaya.fi)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paazmaya/yaml-validator/issues"
+  },
+  "homepage": "https://github.com/paazmaya/yaml-validator#readme",
+  "dependencies": {
+    "check-type": "^0.4.11",
+    "js-yaml": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0"
+  }
+}
