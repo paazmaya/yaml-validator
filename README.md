@@ -2,7 +2,6 @@
 
 > Validate Yaml files and enforce a given structure
 
-
 [Yaml](http://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
 and the structure defined in the configuration options is enforced with
 [`check-type`](https://github.com/alistairjcbrown/check-type).
@@ -12,10 +11,13 @@ and the structure defined in the configuration options is enforced with
 Please note that this library requires the minimum [Node.js](https://nodejs.org/en/)
 version to be `4.2.0`, which is the Long Term Support (LTS) version.
 
+Installation:
+
 ```sh
 npm install yaml-validator --save-dev
 ```
 
+Usage:
 
 ```js
 const YamlValidator = require('yaml-validator');
@@ -158,6 +160,6 @@ Please note that any features or changed will not be merged without working unit
 
 ## License
 
-Copyright (c) [Juga Paazmaya](http://www.paazmaya.fi) <paazmaya@yahoo.com>
+Copyright (c) [Juga Paazmaya](http://paazmaya.fi) <paazmaya@yahoo.com>
 
 Licensed under [the MIT license](LICENSE).
