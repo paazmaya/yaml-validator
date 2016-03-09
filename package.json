@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/paazmaya/yaml-validator.git"
   },
-  "author": "Juga Paazmaya <paazmaya@yahoo.com> (http://www.paazmaya.fi)",
+  "author": "Juga Paazmaya <paazmaya@yahoo.com> (http://paazmaya.fi)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paazmaya/yaml-validator/issues"
@@ -22,6 +22,6 @@
     "js-yaml": "^3.5.3"
   },
   "devDependencies": {
-    "eslint": "^2.2.0"
+    "eslint": "^2.3.0"
   }
 }
