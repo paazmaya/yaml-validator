@@ -2,6 +2,8 @@
 
 > Validate Yaml files and enforce a given structure
 
+[![Build Status](https://semaphoreci.com/api/v1/paazmaya/yaml-validator/branches/master/badge.svg)](https://semaphoreci.com/paazmaya/yaml-validator)
+
 [Yaml](http://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
 and the structure defined in the configuration options is enforced with
 [`check-type`](https://github.com/alistairjcbrown/check-type).
