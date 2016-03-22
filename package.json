@@ -4,7 +4,8 @@
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "node tests/index_tape.js",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov | codecov",
     "lint": "eslint -c .eslintrc.json index.js"
   },
   "repository": {
@@ -22,6 +23,9 @@
     "js-yaml": "^3.5.3"
   },
   "devDependencies": {
-    "eslint": "^2.3.0"
+    "codecov": "^1.0.1",
+    "eslint": "^2.3.0",
+    "nyc": "^6.1.1",
+    "tape": "^4.5.1"
   }
 }

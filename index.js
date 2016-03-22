@@ -13,13 +13,12 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const check = require('check-type').init();
 
-var YamlValidatore = function YamlValidatore(options) {
+let YamlValidatore = function YamlValidatore(options) {
   this.options = options;
   this.logs = [];
   this.nonValidPaths = []; // list of property paths
   this.inValidFilesCount = 0;
 };
-
 
 /**
  * Store log messages
@@ -31,7 +30,6 @@ YamlValidatore.prototype.errored = function errored(msg) {
   this.logs.push(msg);
 };
 
-
 /**
  * Check that the given structure is available.
  * @param {Object} doc Object loaded from Yaml file
@@ -40,7 +38,7 @@ YamlValidatore.prototype.errored = function errored(msg) {
  * @returns {Array} List of not found structure paths
  */
 YamlValidatore.prototype.validateStructure = function validateStructure(doc, structure, parent) {
-  var notFound = [],
+  let notFound = [],
     current = '',
     notValid; // false or path
 
@@ -53,7 +51,7 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
       current += (parent.length > 0 ? '.' : '') + key;
     }
 
-    var item = structure[key];
+    const item = structure[key];
 
     if (item instanceof Array) {
       if (check(doc).has(key) && check(doc[key]).is('Array')) {
@@ -79,28 +77,26 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
   });
 
-
   return notFound.filter(function filterFalse(item) {
     return item !== false;
   });
 };
 
 /**
- * Read the given Yaml file, load and check its structure.
+ * Read and parse the given Yaml file.
  * @param {string} filepath Yaml file path
- * @returns {number} 0 when no errors, 1 when errors.
+ * @returns {string|null} Parsed Yaml or null on failure
  */
-YamlValidatore.prototype.checkFile = function checkFile(filepath) {
+YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   // Verbose output will tell which file is being read
-  var data = fs.readFileSync(filepath, 'utf8'),
-    hadWarning = 0,
+  const data = fs.readFileSync(filepath, 'utf8'),
     _self = this;
 
-  var doc;
+  let doc;
+
   try {
     doc = yaml.safeLoad(data, {
       onWarning: function onWarning(error) {
-        hadWarning = 1;
         _self.errored(filepath + ' > ' + error);
         if (_self.options.yaml &&
           typeof _self.options.yaml.onWarning === 'function') {
@@ -109,18 +105,33 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
       }
     });
   }
-  catch (error) {
-    console.error(error);
+  catch (err) {
+    console.error(err);
+    return null;
+  }
+
+  return doc;
+};
+
+/**
+ * Read the given Yaml file, load and check its structure.
+ * @param {string} filepath Yaml file path
+ * @returns {number} 0 when no errors, 1 when errors.
+ */
+YamlValidatore.prototype.checkFile = function checkFile(filepath) {
+  const doc = this.loadFile(filepath);
+
+  if (!doc) {
     return 1;
   }
 
   if (this.options.writeJson) {
-    var json = JSON.stringify(doc, null, '  ');
+    const json = JSON.stringify(doc, null, '  ');
     fs.writeFileSync(filepath.replace(/yml$/, 'json'), json, 'utf8');
   }
 
   if (this.options.structure) {
-    var nonValidPaths = this.validateStructure(doc, this.options.structure);
+    const nonValidPaths = this.validateStructure(doc, this.options.structure);
 
     if (nonValidPaths.length > 0) {
       this.errored(filepath + ' is not following the correct structure, missing:');
@@ -129,7 +140,7 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
     }
   }
 
-  return hadWarning;
+  return 0;
 };
 
 /**
@@ -138,7 +149,7 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
  * @returns {void}
  */
 YamlValidatore.prototype.validate = function validate(files) {
-  var _self = this;
+  const _self = this;
   this.inValidFilesCount = files.map(function mapFiles(filepath) {
     return _self.checkFile(filepath);
   }).reduce(function reduceFiles(prev, curr) {
@@ -156,7 +167,7 @@ YamlValidatore.prototype.report = function report() {
     this.errored('Yaml format related errors in ' + this.inValidFilesCount + ' files');
   }
 
-  var len = this.nonValidPaths.length;
+  const len = this.nonValidPaths.length;
   this.errored('Total of ' + len + ' structure validation error(s)');
 
   if (typeof this.options.log === 'string') {

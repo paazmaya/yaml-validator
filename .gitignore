@@ -1,7 +1,7 @@
 # Logs
 logs
 *.log
-npm-debug.log*
+.nyc_output
 
 # Runtime data
 pids
@@ -12,7 +12,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage*
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
