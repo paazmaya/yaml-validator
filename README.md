@@ -158,6 +158,8 @@ Please note that any features or changed will not be merged without working unit
 
 ## Release History
 
+* `v0.2.0` (2016-)
+  - Using shared ESLint configuration #2
 * `v0.1.0` (2016-02-22)
   - Initial release to the World with code originating from [`grunt-yaml-validator` version `0.8.0`](https://github.com/paazmaya/grunt-yaml-validator/)
 

@@ -20,12 +20,13 @@
   "homepage": "https://github.com/paazmaya/yaml-validator#readme",
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.5.5"
+    "js-yaml": "^3.6.0"
   },
   "devDependencies": {
     "codecov": "^1.0.1",
-    "eslint": "^2.7.0",
-    "nyc": "^6.2.1",
+    "eslint": "^2.9.0",
+    "eslint-config-paazmaya": "^1.0.1",
+    "nyc": "^6.4.2",
     "tape": "^4.5.1"
   }
 }
