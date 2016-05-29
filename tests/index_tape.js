@@ -12,8 +12,9 @@ const tape = require('tape'),
   validator = require('../index');
 
 tape('function is exported', (test) => {
-  test.plan(1);
+  test.plan(2);
 
   test.equal(typeof validator, 'function');
+  test.equal(validator.length, 1);
 });
 

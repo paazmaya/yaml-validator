@@ -13,7 +13,7 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const check = require('check-type').init();
 
-let YamlValidatore = function YamlValidatore(options) {
+const YamlValidatore = function YamlValidatore(options) {
   this.options = options;
   this.logs = [];
   this.nonValidPaths = []; // list of property paths
