@@ -3,7 +3,7 @@
 > Validate Yaml files and enforce a given structure
 
 [![Build Status](https://semaphoreci.com/api/v1/paazmaya/yaml-validator/branches/master/shields_badge.svg)](https://semaphoreci.com/paazmaya/yaml-validator)
-[![codecov.io](https://codecov.io/github/paazmaya/yaml-validator/coverage.svg?branch=master)](https://codecov.io/github/paazmaya/yaml-validator?branch=master)
+[![codecov](https://codecov.io/gh/paazmaya/yaml-validator/branch/master/graph/badge.svg)](https://codecov.io/gh/paazmaya/yaml-validator)
 
 [Yaml](http://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
 and the structure defined in the configuration options is enforced with
