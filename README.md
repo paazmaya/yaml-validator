@@ -166,6 +166,6 @@ Please note that any features or changed will not be merged without working unit
 
 ## License
 
-Copyright (c) [Juga Paazmaya](http://paazmaya.fi) <paazmaya@yahoo.com>
+Copyright (c) [Juga Paazmaya](https://paazmaya.fi) <paazmaya@yahoo.com>
 
 Licensed under [the MIT license](LICENSE).
