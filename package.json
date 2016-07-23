@@ -18,6 +18,9 @@
     "url": "https://github.com/paazmaya/yaml-validator/issues"
   },
   "homepage": "https://github.com/paazmaya/yaml-validator#readme",
+  "engines": {
+    "node": ">=4.2.0"
+  },
   "dependencies": {
     "check-type": "^0.4.11",
     "js-yaml": "^3.6.1"
