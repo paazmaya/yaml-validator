@@ -1,7 +1,16 @@
 ### Expected behaviour
 
+What it should have accomplished.
+
 ### Actual behaviour
 
-### Version of this tool used, was it latest via npm, master branch?
+How to reproduce with minimal working example.
 
-### Versions for OS, Node.js, npm
+### Versions and environment
+
+ * Operating system:
+ * Node.js:
+ * npm:
+ * yaml-validator:
+
+Thank you and have some :grapes:.
