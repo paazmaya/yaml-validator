@@ -157,6 +157,11 @@ Lint with [ESLint](http://eslint.org) and test your code using unit tests.
 
 Please note that any features or changed will not be merged without working unit tests.
 
+Unit tests are written with [`tape`](https://github.com/substack/tape) and can be executed with `npm test`.
+Code coverage is inspected with [`nyc`](https://github.com/istanbuljs/nyc) and
+can be executed with `npm run coverage` after running `npm test`.
+Please make sure it is over 90% at all times.
+
 ## Release History
 
 * `v0.2.0` (2016-07-06)
