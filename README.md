@@ -164,6 +164,8 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v0.2.1` (2016-08-25)
+  - Define the minimum Node.js version in `package.json`, as `4.2.0`
 * `v0.2.0` (2016-07-06)
   - Using shared ESLint configuration #2
   - Possible JSON file written now replaces extension properly
