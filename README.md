@@ -149,11 +149,12 @@ const options = {
 
 ## Contributing
 
-[Please refer to a GitHub blog post on how to create somewhat perfect pull request.](https://github.com/blog/1943-how-to-write-the-perfect-pull-request "How to write the perfect pull request")
+["A Beginner's Guide to Open Source: The Best Advice for Making your First Contribution"](http://hf.heidilabs.com/blog/a-beginners-guide-to-open-source-making-your-first-contribution).
 
-In lieu of a formal styleguide, take care to maintain the existing coding style.
-Add unit tests for any new or changed functionality.
-Lint with [ESLint](http://eslint.org) and test your code using unit tests.
+[Also there is a blog post about "45 Github Issues Dos and Don’ts"](https://davidwalsh.name/45-github-issues-dos-donts).
+
+Linting is done with [ESLint](http://eslint.org) and can be executed with `npm run lint`.
+There should be no errors appearing after any JavaScript file changes.
 
 Please note that any features or changed will not be merged without working unit tests.
 
