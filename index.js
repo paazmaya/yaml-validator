@@ -48,7 +48,9 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
     current = parent;
     if (!check(structure).is('Array')) {
-      current += (parent.length > 0 ? '.' : '') + key;
+      current += (parent.length > 0 ?
+        '.' :
+        '') + key;
     }
 
     const item = structure[key];
@@ -68,7 +70,9 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
       notValid = !((check(structure).is('Array') || check(doc).has(key)) && check(doc[key]).is(item));
 
       // Key can be a index number when the structure is an array, but passed as a string
-      notFound.push(notValid ? current : false);
+      notFound.push(notValid ?
+        current :
+        false);
     }
     else if (typeof item === 'object' && item !== null) {
       notValid = validateStructure(doc[key], item, current);
@@ -107,6 +111,7 @@ YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   }
   catch (err) {
     console.error(err);
+
     return null;
   }
 
@@ -176,4 +181,3 @@ YamlValidatore.prototype.report = function report() {
 };
 
 module.exports = YamlValidatore;
-
