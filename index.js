@@ -14,7 +14,12 @@ const yaml = require('js-yaml');
 const check = require('check-type').init();
 
 const YamlValidatore = function YamlValidatore(options) {
-  this.options = options;
+  this.options = Object.assign({
+    log: false,
+    structure: false,
+    yaml: false,
+    writeJson: false
+  }, options);
   this.logs = [];
   this.nonValidPaths = []; // list of property paths
   this.inValidFilesCount = 0;
@@ -89,8 +94,17 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
  */
 YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   // Verbose output will tell which file is being read
-  const data = fs.readFileSync(filepath, 'utf8'),
-    _self = this;
+  let data;
+  const _self = this;
+
+  try {
+    data = fs.readFileSync(filepath, 'utf8');
+  }
+  catch (err) {
+    _self.errored(filepath + ' > No such file or directory');
+
+    return null;
+  }
 
   let doc;
 
@@ -107,6 +121,7 @@ YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   }
   catch (err) {
     console.error(err);
+
     return null;
   }
 
@@ -154,7 +169,7 @@ YamlValidatore.prototype.validate = function validate(files) {
     return _self.checkFile(filepath);
   }).reduce(function reduceFiles(prev, curr) {
     return prev + curr;
-  });
+  }, _self.inValidFilesCount);
 };
 
 /**
@@ -176,4 +191,3 @@ YamlValidatore.prototype.report = function report() {
 };
 
 module.exports = YamlValidatore;
-
