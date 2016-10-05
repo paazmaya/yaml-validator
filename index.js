@@ -61,7 +61,12 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
     if (item instanceof Array) {
       if (check(doc).has(key) && check(doc[key]).is('Array')) {
         doc[key].forEach(function eachArray(child, index) {
-          notValid = validateStructure([child], item, current + '[' + index + ']');
+          if (item.length > 1) {
+            notValid = validateStructure([child], [item[index]], current + '[' + index + ']');
+          }
+          else {
+            notValid = validateStructure([child], item, current + '[' + index + ']');
+          }
           notFound = notFound.concat(notValid);
         });
       }
@@ -152,6 +157,8 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
       this.errored(filepath + ' is not following the correct structure, missing:');
       this.errored(nonValidPaths.join('\n'));
       this.nonValidPaths = this.nonValidPaths.concat(nonValidPaths);
+
+      return 1;
     }
   }
 
