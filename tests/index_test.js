@@ -8,9 +8,11 @@
 
 'use strict';
 
+const fs = require('fs');
+
 const tape = require('tape'),
-  validator = require('../index'),
-  fs = require('fs');
+  validator = require('../index');
+
 
 tape('Exporting function', test => {
   test.plan(2);
@@ -32,8 +34,8 @@ tape('Validating methods', test => {
   test.equal(typeof validatorInstance.report, 'function');
 });
 
-tape('Default paramters\' values', test => {
-  test.plan(4);
+tape('Default parameter values', test => {
+  test.plan(8);
 
   const validatorInstance = new validator();
   validatorInstance.validate([]);
@@ -42,6 +44,10 @@ tape('Default paramters\' values', test => {
   test.equal(validatorInstance.logs.length, 0);
   test.equal(validatorInstance.nonValidPaths.length, 0);
   test.equal(typeof validatorInstance.options, 'object');
+  test.equal(validatorInstance.options.log, false);
+  test.equal(validatorInstance.options.writeJson, false);
+  test.equal(validatorInstance.options.structure, false);
+  test.equal(validatorInstance.options.yaml, false);
 });
 
 tape('Wrong filepath #1', test => {
@@ -124,7 +130,7 @@ tape('Valid Structure', test => {
       ],
       build: 'string'
     }
-  }
+  };
 
   const validatorInstance = new validator(options);
   validatorInstance.validate(['appveyor.yml']);
@@ -166,7 +172,7 @@ tape('Invalid Structure', test => {
       ],
       build: 'string'
     }
-  }
+  };
 
   const validatorInstance = new validator(options);
   validatorInstance.validate(['appveyor.yml']);
@@ -179,7 +185,7 @@ tape('Test creation of JSON file from YAML structure', test => {
 
   const options = {
     writeJson: true
-  }
+  };
 
   const validatorInstance = new validator(options);
   validatorInstance.validate(['appveyor.yml']);
@@ -198,7 +204,7 @@ tape('Test creation of Log reports from YAML structure', test => {
 
   const options = {
     log: 'yaml_validator.log'
-  }
+  };
 
   const validatorInstance = new validator(options);
   validatorInstance.validate(['appveyor.yml']);
