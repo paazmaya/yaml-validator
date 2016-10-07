@@ -14,7 +14,12 @@ const yaml = require('js-yaml');
 const check = require('check-type').init();
 
 const YamlValidatore = function YamlValidatore(options) {
-  this.options = options;
+  this.options = Object.assign({
+    log: false,
+    structure: false,
+    yaml: false,
+    writeJson: false
+  }, options);
   this.logs = [];
   this.nonValidPaths = []; // list of property paths
   this.inValidFilesCount = 0;
@@ -58,7 +63,12 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
     if (item instanceof Array) {
       if (check(doc).has(key) && check(doc[key]).is('Array')) {
         doc[key].forEach(function eachArray(child, index) {
-          notValid = validateStructure([child], item, current + '[' + index + ']');
+          if (item.length > 1) {
+            notValid = validateStructure([child], [item[index]], current + '[' + index + ']');
+          }
+          else {
+            notValid = validateStructure([child], item, current + '[' + index + ']');
+          }
           notFound = notFound.concat(notValid);
         });
       }
@@ -93,8 +103,17 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
  */
 YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   // Verbose output will tell which file is being read
-  const data = fs.readFileSync(filepath, 'utf8'),
-    _self = this;
+  let data;
+  const _self = this;
+
+  try {
+    data = fs.readFileSync(filepath, 'utf8');
+  }
+  catch (err) {
+    _self.errored(filepath + ' > No such file or directory');
+
+    return null;
+  }
 
   let doc;
 
@@ -142,6 +161,8 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
       this.errored(filepath + ' is not following the correct structure, missing:');
       this.errored(nonValidPaths.join('\n'));
       this.nonValidPaths = this.nonValidPaths.concat(nonValidPaths);
+
+      return 1;
     }
   }
 
@@ -159,7 +180,7 @@ YamlValidatore.prototype.validate = function validate(files) {
     return _self.checkFile(filepath);
   }).reduce(function reduceFiles(prev, curr) {
     return prev + curr;
-  });
+  }, _self.inValidFilesCount);
 };
 
 /**

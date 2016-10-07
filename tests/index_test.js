@@ -8,13 +8,212 @@
 
 'use strict';
 
+const fs = require('fs');
+
 const tape = require('tape'),
   validator = require('../index');
 
-tape('function is exported', (test) => {
+
+tape('Exporting function', test => {
   test.plan(2);
 
   test.equal(typeof validator, 'function');
   test.equal(validator.length, 1);
 });
 
+tape('Validating methods', test => {
+  test.plan(6);
+
+  const validatorInstance = new validator();
+
+  test.equal(typeof validatorInstance.errored, 'function');
+  test.equal(typeof validatorInstance.validateStructure, 'function');
+  test.equal(typeof validatorInstance.loadFile, 'function');
+  test.equal(typeof validatorInstance.checkFile, 'function');
+  test.equal(typeof validatorInstance.validate, 'function');
+  test.equal(typeof validatorInstance.report, 'function');
+});
+
+tape('Default parameter values', test => {
+  test.plan(8);
+
+  const validatorInstance = new validator();
+  validatorInstance.validate([]);
+
+  test.equal(validatorInstance.inValidFilesCount, 0);
+  test.equal(validatorInstance.logs.length, 0);
+  test.equal(validatorInstance.nonValidPaths.length, 0);
+  test.equal(typeof validatorInstance.options, 'object');
+  test.equal(validatorInstance.options.log, false);
+  test.equal(validatorInstance.options.writeJson, false);
+  test.equal(validatorInstance.options.structure, false);
+  test.equal(validatorInstance.options.yaml, false);
+});
+
+tape('Wrong filepath #1', test => {
+  test.plan(2);
+
+  const validatorInstance = new validator();
+  validatorInstance.validate(['appveyur.yml']);
+
+  test.equal(validatorInstance.logs.length, 1);
+  test.equal(validatorInstance.inValidFilesCount, 1);
+});
+
+tape('Wrong filepath #2', test => {
+  test.plan(2);
+
+  const validatorInstance = new validator();
+  validatorInstance.validate(['appveyur.yml', './appveyur.yml', '/var/www/sample.yml']);
+
+  test.equal(validatorInstance.logs.length, 3);
+  test.equal(validatorInstance.inValidFilesCount, 3);
+});
+
+tape('report() increments log length by one if no invalid files', test => {
+  test.plan(2);
+
+  const validatorInstance = new validator();
+  validatorInstance.validate(['appveyor.yml']);
+
+  test.equal(validatorInstance.logs.length, 0);
+
+  validatorInstance.report();
+
+  test.equal(validatorInstance.logs.length, 1);
+});
+
+tape('report() increments log length by two if invalid files present', test => {
+  test.plan(2);
+
+  const validatorInstance = new validator();
+  validatorInstance.validate(['appveyur.yml']);
+
+  test.equal(validatorInstance.logs.length, 1);
+
+  validatorInstance.report();
+
+  test.equal(validatorInstance.logs.length, 3);
+});
+
+tape('Valid Structure', test => {
+  test.plan(1);
+
+  const options = {
+    structure: {
+      environment: {
+        matrix: [
+          {
+            nodejs_version: 'string'
+          }
+        ]
+      },
+      version: 'string',
+      init: [
+        'string'
+      ],
+      clone_depth: 'number',
+      matrix: {
+        fast_finish: 'boolean'
+      },
+      cache: [
+        'string'
+      ],
+      install: [
+        {
+          ps: 'string'
+        },
+        'string'
+      ],
+      test_script: [
+        'string'
+      ],
+      build: 'string'
+    }
+  };
+
+  const validatorInstance = new validator(options);
+  validatorInstance.validate(['appveyor.yml']);
+
+  test.equal(validatorInstance.inValidFilesCount, 0);
+});
+
+tape('Invalid Structure', test => {
+  test.plan(1);
+
+  const options = {
+    structure: {
+      environment: {
+        matrix: [
+          {
+            nodejs_version: 'string'
+          }
+        ]
+      },
+      init: [
+        'string'
+      ],
+      version: 'string',
+      clone_depth: 'number',
+      matrix: {
+        fast_finish: 'number'
+      },
+      cache: [
+        'string'
+      ],
+      install: [
+        {
+          ps: 'string'
+        },
+        'string'
+      ],
+      test_script: [
+        'string'
+      ],
+      build: 'string'
+    }
+  };
+
+  const validatorInstance = new validator(options);
+  validatorInstance.validate(['appveyor.yml']);
+
+  test.equal(validatorInstance.inValidFilesCount, 1);
+});
+
+tape('Test creation of JSON file from YAML structure', test => {
+  test.plan(1);
+
+  const options = {
+    writeJson: true
+  };
+
+  const validatorInstance = new validator(options);
+  validatorInstance.validate(['appveyor.yml']);
+
+  fs.unlink('appveyor.json', function (err) {
+    if (err) {
+      test.fail('Json file does not exist...');
+    } else {
+      test.pass('Json file exists...');
+    }
+  });
+});
+
+tape('Test creation of Log reports from YAML structure', test => {
+  test.plan(1);
+
+  const options = {
+    log: 'yaml_validator.log'
+  };
+
+  const validatorInstance = new validator(options);
+  validatorInstance.validate(['appveyor.yml']);
+  validatorInstance.report();
+  fs.unlink('yaml_validator.log', function (err) {
+    if (err) {
+      test.fail('Log does not exist...');
+    } else {
+      test.pass('Log exists...');
+    }
+  });
+});
