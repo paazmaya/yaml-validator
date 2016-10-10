@@ -64,13 +64,13 @@ Default value: `false`
 The most complex style of checking validity.
 
 
-### options.yaml
+### options.onWarning
 
-Type: `object`
+Type: `function`
 
-Default value: `false`
+Default value: `null`
 
-Options passed to [`safeload` method of `js-yaml`](https://github.com/nodeca/js-yaml#safeload-string---options-).
+One of the options passed to [`safeload` method of `js-yaml`](https://github.com/nodeca/js-yaml#safeload-string---options-).
 
 Please note that the `onWarning` callback is being used by this library and any method written for it,
 will be run after the one implemented in this library.
@@ -124,14 +124,12 @@ const options = {
 
 ### Warning callback in Yaml parsing options
 
-Using the `options.yaml.onWarning` callback, the possible parsing errors can be retrieved.
+Using the `options.onWarning` callback, the possible parsing errors can be retrieved.
 
 ```js
 const options = {
-  yaml: {
-    onWarning: function (error, filepath) {
-      console.log(filepath + ' has error: ' + error);
-    }
+  onWarning: function (error, filepath) {
+    console.log(filepath + ' has error: ' + error);
   }
 };
 ```
@@ -165,6 +163,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v0.3.0` (2016-10-10)
+  - Proper unit tests #6
+  - `options.yaml.onWarning` is now `options.onWarning`
 * `v0.2.1` (2016-08-25)
   - Define the minimum Node.js version in `package.json`, as `4.2.0`
 * `v0.2.0` (2016-07-06)

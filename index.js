@@ -17,9 +17,10 @@ const YamlValidatore = function YamlValidatore(options) {
   this.options = Object.assign({
     log: false,
     structure: false,
-    yaml: false,
+    onWarning: null,
     writeJson: false
   }, options);
+
   this.logs = [];
   this.nonValidPaths = []; // list of property paths
   this.inValidFilesCount = 0;
@@ -121,15 +122,15 @@ YamlValidatore.prototype.loadFile = function loadFile(filepath) {
     doc = yaml.safeLoad(data, {
       onWarning: function onWarning(error) {
         _self.errored(filepath + ' > ' + error);
-        if (_self.options.yaml &&
-          typeof _self.options.yaml.onWarning === 'function') {
-          _self.options.yaml.onWarning.call(this, error, filepath);
+        if (typeof _self.options.onWarning === 'function') {
+          _self.options.onWarning.call(this, error, filepath);
         }
       }
     });
   }
-  catch (err) {
-    console.error(err);
+  catch (error) {
+    _self.errored(`Failed to load the Yaml file "${filepath}"`);
+    console.error(error.message);
 
     return null;
   }

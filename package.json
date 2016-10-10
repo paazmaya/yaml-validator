@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "scripts": {
@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "codecov": "^1.0.1",
-    "eslint": "^3.6.1",
+    "eslint": "^3.7.1",
     "eslint-config-paazmaya": "^3.0.0",
-    "nyc": "^8.3.0",
-    "tape": "^4.6.0"
+    "nyc": "^8.3.1",
+    "tape": "^4.6.2"
   }
 }
