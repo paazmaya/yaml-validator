@@ -13,7 +13,7 @@ and the structure defined in the configuration options is enforced with
 ## Getting Started
 
 Please note that this library requires the minimum [Node.js](https://nodejs.org/en/)
-version to be `4.2.0`, which is the Long Term Support (LTS) version.
+version to be `6.9.5`, which is the Long Term Support (LTS) version.
 
 Installation:
 
