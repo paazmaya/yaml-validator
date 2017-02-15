@@ -23,13 +23,13 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.7.0"
+    "js-yaml": "^3.8.1"
   },
   "devDependencies": {
     "codecov": "^1.0.1",
-    "eslint": "^3.10.2",
+    "eslint": "^3.15.0",
     "eslint-config-paazmaya": "^3.1.0",
-    "nyc": "^10.0.0",
+    "nyc": "^10.1.2",
     "tape": "^4.6.3"
   }
 }
