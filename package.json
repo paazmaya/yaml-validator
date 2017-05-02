@@ -4,8 +4,8 @@
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "scripts": {
-    "test": "nyc tape tests/*_test.js",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "test": "nyc --exclude tests tape tests/*_test.js",
+    "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint -c .eslintrc.json index.js"
   },
   "repository": {
