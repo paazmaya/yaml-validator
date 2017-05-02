@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc --exclude tests tape tests/*_test.js",
     "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "eslint -c .eslintrc.json index.js"
+    "lint": "eslint index.js"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,13 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.8.2"
+    "js-yaml": "^3.8.3"
   },
   "devDependencies": {
     "codecov": "^2.1.0",
-    "eslint": "^3.18.0",
+    "eslint": "^3.19.0",
     "eslint-config-paazmaya": "^3.2.0",
-    "nyc": "^10.2.0",
+    "nyc": "^10.3.0",
     "tape": "^4.6.3"
   }
 }
