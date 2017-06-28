@@ -129,8 +129,9 @@ YamlValidatore.prototype.loadFile = function loadFile(filepath) {
     });
   }
   catch (error) {
-    _self.errored(`Failed to load the Yaml file "${filepath}"`);
-    console.error(error.message);
+    const lineNumber = error.message.match(/line (\d+)/)[1];
+    _self.errored(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);
+    console.error(`${filepath}:${lineNumber}\n${error.message}`);
 
     return null;
   }
