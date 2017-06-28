@@ -86,13 +86,14 @@ tape('Wrong kind of file contents', test => {
 tape('Wrong kind of file contents trigger onWarning callback', test => {
   test.plan(2);
 
+  const testfile = 'README.md';
   // Failed to load the Yaml file "README.md"
   const validatorInstance = new Validator({
     onWarning: function (error, filepath) {
-      test.equal(filepath, 'README.md');
+      test.equal(filepath, testfile);
     }
   });
-  validatorInstance.validate(['README.md']);
+  validatorInstance.validate([testfile]);
 
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
@@ -198,6 +199,7 @@ tape('Invalid Structure', test => {
       test_script: [
         'string'
       ],
+      notUsedKey: [],
       build: 'string'
     }
   };
