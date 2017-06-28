@@ -163,6 +163,10 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v0.4.0` (2017-06-28)
+  - Provide file name, error message and line number when failing #7
+  - Keep dependencies up to date and test against Node.js major version `8`
+  - Minimum supported Node.js version lifted from `4.2.0` to `6.9.5`
 * `v0.3.0` (2016-10-10)
   - Proper unit tests #6
   - `options.yaml.onWarning` is now `options.onWarning`
