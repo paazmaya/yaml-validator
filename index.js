@@ -50,8 +50,8 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
   parent = parent || '';
 
-  Object.keys(structure).forEach(function eachKey(key) {
 
+  Object.keys(structure).forEach(function eachKey(key) {
     current = parent;
     if (!check(structure).is('Array')) {
       current += (parent.length > 0 ?
@@ -74,11 +74,18 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
         });
       }
       else {
-        notFound.push(current);
+        if(item[0] !== "____OPTIONAL____"){
+            notFound.push(current);
+        }
       }
     }
     else if (typeof item === 'string') {
-      notValid = !((check(structure).is('Array') || check(doc).has(key)) && check(doc[key]).is(item));
+      var validate = item.split(":");
+
+      notValid = false;
+      if(validate.length === 1 || (validate.length === 2 && validate[1] !== "?")){
+          notValid = !((check(structure).is('Array') || check(doc).has(key)) && check(doc[key]).is(validate[0]));
+      }
 
       // Key can be a index number when the structure is an array, but passed as a string
       notFound.push(notValid ?
@@ -86,8 +93,10 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
         false);
     }
     else if (typeof item === 'object' && item !== null) {
-      notValid = validateStructure(doc[key], item, current);
-      notFound = notFound.concat(notValid);
+      if(!item.____OPTIONAL____) {
+          notValid = validateStructure(doc[key], item, current);
+          notFound = notFound.concat(notValid);
+      }
     }
 
   });

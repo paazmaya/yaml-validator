@@ -206,8 +206,53 @@ tape('Invalid Structure', test => {
 
   const validatorInstance = new Validator(options);
   validatorInstance.validate(['appveyor.yml']);
-
   test.equal(validatorInstance.inValidFilesCount, 1);
+});
+
+
+tape('Optional Structure', test => {
+  test.plan(1);
+
+  const options = {
+    structure: {
+      environment: {
+        matrix: [
+          {
+            nodejs_version: 'string'
+          }
+        ]
+      },
+      init: [
+        'string'
+      ],
+      version: 'string',
+      clone_depth: 'number',
+      matrix: {
+        fast_finish: 'boolean'
+      },
+      cache: [
+        'string'
+      ],
+      install: [
+        {
+          ps: 'string'
+        },
+        'string'
+      ],
+      test_script: [
+        'string'
+      ],
+      build: 'string:?',
+
+      optionalKey: ["____OPTIONAL____"],
+      optionalField: "string:?",
+      optionalProperty: ["____OPTIONAL____"],
+    }
+  };
+
+  const validatorInstance = new Validator(options);
+  validatorInstance.validate(['appveyor.yml']);
+  test.equal(validatorInstance.inValidFilesCount, 0);
 });
 
 tape('Test creation of JSON file from YAML structure', test => {

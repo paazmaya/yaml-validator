@@ -103,15 +103,21 @@ The `teachers` array is made of strings, thus all items in that array must be a 
 const options = {
   structure: {
     school: {
-      description: 'string',
+      description: 'string:?', //optional, won't show in invalid array
       code: 'number',
       principal: {
         name: 'string'
       },
       classRooms: [
+        "____OPTIONAL____",   //optional
         {
           name: 'string',
-          id: 'number'
+          id: 'number',
+          location:{          //location is optional
+            ____OPTIONAL____:true,
+            floor: "string",
+            building: "string",
+          }
         }
       ],
       teachers: [
