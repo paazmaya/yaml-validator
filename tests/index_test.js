@@ -225,33 +225,36 @@ tape('Optional Structure', test => {
       init: [
         'string'
       ],
-      version: 'string',
+      'version?': 'string',
       clone_depth: 'number',
       matrix: {
-        fast_finish: 'boolean'
+        fast_finish: 'boolean',
+        'option field?': 'string'
       },
-      cache: [
+      'cache?': [
         'string'
       ],
-      install: [
+      'install?': [
         {
-          ps: 'string'
+          ps: 'string',
+          'ps2?': 'string'
         },
         'string'
       ],
       test_script: [
         'string'
       ],
-      build: 'string:?',
+      'build?': 'string',
 
-      optionalKey: ["____OPTIONAL____"],
-      optionalField: "string:?",
-      optionalProperty: ["____OPTIONAL____"],
+      'optionalKey?': ["string"],
+      'optionalField?': "string",
+      'optionalProperty?': {'field1?':"string"},
     }
   };
 
   const validatorInstance = new Validator(options);
   validatorInstance.validate(['appveyor.yml']);
+  console.log(validatorInstance);
   test.equal(validatorInstance.inValidFilesCount, 0);
 });
 

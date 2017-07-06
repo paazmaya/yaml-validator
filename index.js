@@ -50,8 +50,10 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
   parent = parent || '';
 
+  Object.keys(structure).forEach(function eachKey(originKey) {
+    const optional = originKey.endsWith('?');
+    const key = originKey.replace('?', '');
 
-  Object.keys(structure).forEach(function eachKey(key) {
     current = parent;
     if (!check(structure).is('Array')) {
       current += (parent.length > 0 ?
@@ -59,8 +61,7 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
         '') + key;
     }
 
-    const item = structure[key];
-
+    const item = structure[originKey];
     if (item instanceof Array) {
       if (check(doc).has(key) && check(doc[key]).is('Array')) {
         doc[key].forEach(function eachArray(child, index) {
@@ -73,18 +74,16 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
           notFound = notFound.concat(notValid);
         });
       }
-      else {
-        if(item[0] !== "____OPTIONAL____"){
-            notFound.push(current);
-        }
+      else if (!optional) {
+        notFound.push(current);
       }
     }
     else if (typeof item === 'string') {
-      var validate = item.split(":");
-
-      notValid = false;
-      if(validate.length === 1 || (validate.length === 2 && validate[1] !== "?")){
-          notValid = !((check(structure).is('Array') || check(doc).has(key)) && check(doc[key]).is(validate[0]));
+      if (!check(doc).has(key) && optional){
+        notValid = false;
+      }
+      else {
+        notValid = !((check(structure).is('Array') || check(doc).has(key)) && check(doc[key]).is(item));
       }
 
       // Key can be a index number when the structure is an array, but passed as a string
@@ -93,12 +92,11 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
         false);
     }
     else if (typeof item === 'object' && item !== null) {
-      if(!item.____OPTIONAL____) {
-          notValid = validateStructure(doc[key], item, current);
-          notFound = notFound.concat(notValid);
+      if (!optional) {
+        notValid = validateStructure(doc[key], item, current);
+        notFound = notFound.concat(notValid);
       }
     }
-
   });
 
   return notFound.filter(function filterFalse(item) {
