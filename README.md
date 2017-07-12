@@ -99,11 +99,12 @@ properties, with the given types.
 
 The `teachers` array is made of strings, thus all items in that array must be a string.
 
+
 ```js
 const options = {
   structure: {
     school: {
-      description: 'string',
+      'description?': 'string', //Optional, won't show in invalid array
       code: 'number',
       principal: {
         name: 'string'
@@ -111,7 +112,11 @@ const options = {
       classRooms: [
         {
           name: 'string',
-          id: 'number'
+          id: 'number',
+          'location?':{        
+            floor: "string",
+            building: "string",
+          }
         }
       ],
       teachers: [
