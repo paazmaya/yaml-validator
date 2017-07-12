@@ -99,13 +99,12 @@ properties, with the given types.
 
 The `teachers` array is made of strings, thus all items in that array must be a string.
 
-By adding the question mark at the end of the property key for indicating the optionality, .
 
 ```js
 const options = {
   structure: {
     school: {
-      'description?': 'string', //optional, won't show in invalid array
+      'description?': 'string', //Optional, won't show in invalid array
       code: 'number',
       principal: {
         name: 'string'

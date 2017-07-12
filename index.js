@@ -52,7 +52,7 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
   Object.keys(structure).forEach(function eachKey(originKey) {
     const optional = originKey.endsWith('?');
-    const key = originKey.replace('?', '');
+    const key = originKey.replace(/\?$/, '');
 
     current = parent;
     if (!check(structure).is('Array')) {
