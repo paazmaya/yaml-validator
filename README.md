@@ -12,8 +12,7 @@ and the structure defined in the configuration options is enforced with
 
 ## Getting Started
 
-Please note that this library requires the minimum [Node.js](https://nodejs.org/en/)
-version to be `6.9.5`, which is the Long Term Support (LTS) version.
+Please note that the minimum supported version of [Node.js](https://nodejs.org/en/) is `6.9.5`, which is [the Long Term Support (LTS) version](https://github.com/nodejs/LTS#lts-schedule1).
 
 Installation:
 
