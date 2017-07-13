@@ -168,6 +168,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v1.0.0` (2017-07-13)
+  - Time to go major
+  - Optional keys are now possible #9
 * `v0.4.0` (2017-06-28)
   - Provide file name, error message and line number when failing #7
   - Keep dependencies up to date and test against Node.js major version `8`
