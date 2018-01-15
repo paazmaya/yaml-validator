@@ -14,13 +14,21 @@ and the structure defined in the configuration options is enforced with
 
 Please note that the minimum supported version of [Node.js](https://nodejs.org/en/) is `6.9.5`, which is [the Long Term Support (LTS) version](https://github.com/nodejs/LTS#lts-schedule1).
 
-Installation:
+This tool can be used in two ways, either via Node.js script, or as a command line tool.
+
+Installation when used via Node.js script:
 
 ```sh
 npm install yaml-validator --save-dev
 ```
 
-Usage:
+Installation when used as a command line tool:
+
+```sh
+npm install --global yaml-validator
+```
+
+Usage as a part of a Node.js script:
 
 ```js
 const YamlValidator = require('yaml-validator');
@@ -39,6 +47,13 @@ const validator = new YamlValidator(options);
 validator.validate(files);
 validator.report();
 ```
+
+Using via command line tool, the only argument would be the Yaml file which should be validated:
+
+```sh
+yaml-validator random_file.yml
+```
+
 
 ## Configuration options
 
@@ -167,6 +182,8 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v1.1.0` (2018-01-15)
+  - Providing a command line version
 * `v1.0.0` (2017-07-13)
   - Time to go major
   - Optional keys are now possible #9

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
+  "bin": "bin/yaml-validator.js",
   "scripts": {
     "test": "nyc --exclude tests tape tests/*_test.js",
     "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
