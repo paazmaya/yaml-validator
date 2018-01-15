@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "bin": "bin/yaml-validator.js",
@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.10.0"
+    "js-yaml": "^3.10.0",
+    "optionator": "^0.8.2"
   },
   "devDependencies": {
     "codecov": "^3.0.0",

@@ -15,6 +15,7 @@ and the structure defined in the configuration options is enforced with
 Please note that the minimum supported version of [Node.js](https://nodejs.org/en/) is `6.9.5`, which is [the Long Term Support (LTS) version](https://github.com/nodejs/LTS#lts-schedule1).
 
 This tool can be used in two ways, either via Node.js script, or as a command line tool.
+Note that when used via command line, custom structure cannot be validated.
 
 Installation when used via Node.js script:
 
@@ -34,14 +35,19 @@ Usage as a part of a Node.js script:
 const YamlValidator = require('yaml-validator');
 
 // Default options
-const options = this.options({
+const options = {
   log: false,
   structure: false,
-  yaml: false,
+  onWarning: null,
   writeJson: false
-});
+};
 
-const files = [];
+const files = [
+  'file paths',
+  'that exists',
+  'somewhere',
+  'and are Yaml files'
+];
 
 const validator = new YamlValidator(options);
 validator.validate(files);
@@ -53,7 +59,6 @@ Using via command line tool, the only argument would be the Yaml file which shou
 ```sh
 yaml-validator random_file.yml
 ```
-
 
 ## Configuration options
 
