@@ -105,24 +105,14 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 };
 
 /**
- * Read and parse the given Yaml file.
+ * Parse the given Yaml data.
  * @param {string} filepath Yaml file path
+ * @param {string} data Yaml data
  * @returns {string|null} Parsed Yaml or null on failure
  */
-YamlValidatore.prototype.loadFile = function loadFile(filepath) {
-  // Verbose output will tell which file is being read
-  let data;
+YamlValidatore.prototype.loadData = function loadData(filepath, data) {
+
   const _self = this;
-
-  try {
-    data = fs.readFileSync(filepath, 'utf8');
-  }
-  catch (err) {
-    _self.errored(filepath + ' > No such file or directory');
-
-    return null;
-  }
-
   let doc;
 
   try {
@@ -144,6 +134,28 @@ YamlValidatore.prototype.loadFile = function loadFile(filepath) {
   }
 
   return doc;
+};
+
+/**
+ * Read and parse the given Yaml file.
+ * @param {string} filepath Yaml file path
+ * @returns {string|null} Parsed Yaml or null on failure
+ */
+YamlValidatore.prototype.loadFile = function loadFile(filepath) {
+  // Verbose output will tell which file is being read
+  let data;
+  const _self = this;
+
+  try {
+    data = fs.readFileSync(filepath, 'utf8');
+  }
+  catch (err) {
+    _self.errored(filepath + ' > No such file or directory');
+
+    return null;
+  }
+
+  return this.loadData(filepath, data);
 };
 
 /**
