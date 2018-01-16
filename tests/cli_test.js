@@ -93,3 +93,61 @@ tape('cli executes when file exists', (test) => {
   });
 
 });
+
+tape('cli writes json when requested', (test) => {
+  test.plan(3);
+
+  const jsonFile = 'appveyor.json';
+
+  try {
+    fs.accessSync(jsonFile);
+    test.fail('JSON counterpart existed before');
+  }
+  catch (error) {
+    test.pass('JSON counterpart does not exists before');
+  }
+
+  execFile('node', [pkg.bin, 'appveyor.yml', '-w'], null, (err, stdout) => {
+    test.equal(stdout.trim(), '', 'No output expected');
+
+    try {
+      fs.accessSync(jsonFile);
+      test.pass('JSON counterpart exists');
+      fs.unlinkSync(jsonFile); // clean up
+    }
+    catch (error) {
+      test.fail('JSON counterpart does not exists after');
+    }
+
+  });
+
+});
+
+tape('cli writes log file when requested', (test) => {
+  test.plan(3);
+
+  const logFile = 'hoplaa.log';
+
+  try {
+    fs.accessSync(logFile);
+    test.fail('JSON counterpart existed before');
+  }
+  catch (error) {
+    test.pass('JSON counterpart does not exists before');
+  }
+
+  execFile('node', [pkg.bin, 'appveyor.yml', '-l', logFile], null, (err, stdout) => {
+    test.equal(stdout.trim(), '', 'No output expected');
+
+    try {
+      fs.accessSync(logFile);
+      test.pass('JSON counterpart exists');
+      fs.unlinkSync(logFile); // clean up
+    }
+    catch (error) {
+      test.fail('JSON counterpart does not exists after');
+    }
+
+  });
+
+});
