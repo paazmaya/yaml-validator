@@ -7,7 +7,7 @@
   "scripts": {
     "test": "nyc --exclude tests tape tests/*_test.js",
     "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "eslint index.js"
+    "lint": "eslint index.js bin"
   },
   "repository": {
     "type": "git",
