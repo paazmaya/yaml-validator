@@ -200,6 +200,8 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v1.2.0` (2018-01-17)
+  - Separated parsing method from file reading method, hence one method more available to use
 * `v1.1.0` (2018-01-15)
   - Providing a command line version
 * `v1.0.0` (2017-07-13)
