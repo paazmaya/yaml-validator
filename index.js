@@ -117,10 +117,10 @@ YamlValidatore.prototype.loadData = function loadData(filepath, data) {
 
   try {
     doc = yaml.safeLoad(data, {
-      onWarning: function onWarning(error) {
+      onWarning: (error) => {
         _self.errored(filepath + ' > ' + error);
         if (typeof _self.options.onWarning === 'function') {
-          _self.options.onWarning.call(this, error, filepath);
+          _self.options.onWarning.call(_self, error, filepath);
         }
       }
     });

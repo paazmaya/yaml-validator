@@ -60,6 +60,19 @@ Using via command line tool, the only argument would be the Yaml file which shou
 yaml-validator random_file.yml
 ```
 
+The available options for command line use, can be seen with the help command `yaml-validator -h`, which results in output similar to:
+
+```sh
+yaml-validator [options] <file>
+
+  -h, --help             Help and usage instructions
+  -V, --version          Version number
+  -w, --write-json       Write the contents of the Yaml file to a JSON file next to it
+  -l, --log-file String  Log file where errors are written
+
+Version 1.1.0
+```
+
 ## Configuration options
 
 All options are `false` by default which disables their use.

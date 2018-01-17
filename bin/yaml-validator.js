@@ -99,7 +99,6 @@ catch (error) {
   process.exit(1);
 }
 
-
 const options = {
   writeJson: typeof opts.writeJson === 'boolean' ?
     opts.writeJson :

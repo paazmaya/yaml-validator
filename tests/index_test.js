@@ -82,23 +82,6 @@ tape('Wrong kind of file contents', test => {
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
 
-/*
-tape('Wrong kind of file contents trigger onWarning callback', test => {
-  test.plan(2);
-
-  const testfile = 'README.md';
-  // Failed to load the Yaml file "README.md"
-  const validatorInstance = new Validator({
-    onWarning: function (error, filepath) {
-      test.equal(filepath, testfile);
-    }
-  });
-  validatorInstance.validate([testfile]);
-
-  test.equal(validatorInstance.inValidFilesCount, 1);
-});
-*/
-
 tape('report() increments log length by one if no invalid files', test => {
   test.plan(2);
 
@@ -297,3 +280,21 @@ tape('Test creation of Log reports from YAML structure', test => {
     }
   });
 });
+
+/*
+tape('Wrong kind of file contents trigger onWarning callback', {timeout: 1200}, test => {
+
+  const testfile = 'README.md';
+
+  // Failed to load the Yaml file "README.md"
+  const validatorInstance = new Validator({
+    onWarning: (error, filepath) => {
+      test.equal(filepath, testfile);
+      test.end();
+    }
+  });
+  validatorInstance.validate([testfile]);
+
+  test.equal(validatorInstance.inValidFilesCount, 1);
+});
+*/
