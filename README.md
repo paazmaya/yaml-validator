@@ -120,6 +120,10 @@ Write the given Yaml file as pretty printed JSON in the same path, just by chang
 
 Please note that any existing JSON files will be cruelly overwritten.
 
+## Typescript Support
+
+`YamlValidator` ships with its own typing definition in the library, no need to use `@types`.
+
 ## Examples
 
 ### Structure validation options
