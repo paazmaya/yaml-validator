@@ -3,9 +3,11 @@
   "version": "1.2.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
+  "typings": "typings/index.d.ts",
   "bin": "bin/yaml-validator.js",
   "scripts": {
     "test": "nyc --exclude tests tape tests/*_test.js",
+    "test:typings": "tsc -p tsconfig.json",
     "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint index.js bin"
   },
@@ -28,10 +30,12 @@
     "optionator": "^0.8.2"
   },
   "devDependencies": {
+    "@types/node": "^9.4.6",
     "codecov": "^3.0.0",
     "eslint": "^4.15.0",
     "eslint-config-paazmaya": "^4.3.0",
     "nyc": "^11.4.1",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "typescript": "^2.7.2"
   }
 }
