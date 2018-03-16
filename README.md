@@ -204,9 +204,10 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
-* `v1.2.1` (2018-03-16)
+* `v1.3.0` (2018-03-16)
   - Contents of the Yaml file were overwritten, in the case when saving to JSON and the Yaml file suffix was not `.yml` #14
   - TypeScript types are available #13
+  - Dependencies up to :tophat:
 * `v1.2.0` (2018-01-17)
   - Separated parsing method from file reading method, hence one method more available to use
 * `v1.1.0` (2018-01-15)
