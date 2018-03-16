@@ -172,7 +172,7 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
 
   if (this.options.writeJson) {
     const json = JSON.stringify(doc, null, '  ');
-    fs.writeFileSync(filepath.replace(/\.y(a)?ml$/, '.json'), json, 'utf8');
+    fs.writeFileSync(filepath.replace(/\.y(a)?ml$/i, '.json'), json, 'utf8');
   }
 
   if (this.options.structure) {

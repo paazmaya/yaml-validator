@@ -281,6 +281,18 @@ tape('Test creation of Log reports from YAML structure', test => {
   });
 });
 
+tape('checkFile creates JSON when requested', test => {
+  test.plan(1);
+
+  const name = 'tests/fixtures/just-checking-json-file-appears';
+  const validatorInstance = new Validator({
+    writeJson: true
+  });
+  validatorInstance.checkFile(`${name}.YAML`);
+
+  test.ok(fs.existsSync(`${name}.json`));
+});
+
 /*
 tape('Wrong kind of file contents trigger onWarning callback', {timeout: 1200}, test => {
 
