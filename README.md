@@ -12,7 +12,7 @@ and the structure defined in the configuration options is enforced with
 
 ## Getting Started
 
-Please note that the minimum supported version of [Node.js](https://nodejs.org/en/) is `6.9.5`, which is [the Long Term Support (LTS) version](https://github.com/nodejs/LTS#lts-schedule1).
+Please note that the minimum supported version of [Node.js](https://nodejs.org/en/) is `8.11.1`, which is [the active Long Term Support (LTS) version](https://github.com/nodejs/Release#release-schedule).
 
 This tool can be used in two ways, either via Node.js script, or as a command line tool.
 Note that when used via command line, custom structure cannot be validated.
