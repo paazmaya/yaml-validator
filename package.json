@@ -26,16 +26,16 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.11.0",
+    "js-yaml": "^3.12.0",
     "optionator": "^0.8.2"
   },
   "devDependencies": {
-    "@types/node": "^9.4.7",
-    "codecov": "^3.0.0",
-    "eslint": "^4.19.0",
-    "eslint-config-paazmaya": "^4.3.0",
-    "nyc": "^11.6.0",
-    "tape": "^4.9.0",
-    "typescript": "^2.7.2"
+    "@types/node": "^10.7.1",
+    "codecov": "^3.0.4",
+    "eslint": "^5.4.0",
+    "eslint-config-paazmaya": "^5.0.0",
+    "nyc": "^12.0.2",
+    "tape": "^4.9.1",
+    "typescript": "^3.0.1"
   }
 }
