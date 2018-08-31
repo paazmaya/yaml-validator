@@ -52,7 +52,7 @@ YamlValidatore.prototype.validateStructure = function validateStructure(doc, str
 
   Object.keys(structure).forEach(function eachKey(originKey) {
     const optional = originKey.endsWith('?');
-    const key = originKey.replace(/\?$/, '');
+    const key = originKey.replace(/\?$/u, '');
 
     current = parent;
     if (!check(structure).is('Array')) {
@@ -126,7 +126,7 @@ YamlValidatore.prototype.loadData = function loadData(filepath, data) {
     });
   }
   catch (error) {
-    const lineNumber = error.message.match(/line (\d+)/)[1];
+    const lineNumber = error.message.match(/line (\d+)/u)[1];
     _self.errored(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);
     console.error(`${filepath}:${lineNumber}\n${error.message}`);
 
@@ -172,7 +172,7 @@ YamlValidatore.prototype.checkFile = function checkFile(filepath) {
 
   if (this.options.writeJson) {
     const json = JSON.stringify(doc, null, '  ');
-    fs.writeFileSync(filepath.replace(/\.y(a)?ml$/i, '.json'), json, 'utf8');
+    fs.writeFileSync(filepath.replace(/\.y(a)?ml$/iu, '.json'), json, 'utf8');
   }
 
   if (this.options.structure) {
