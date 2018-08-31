@@ -5,6 +5,7 @@
 [![Ubuntu Build Status](https://semaphoreci.com/api/v1/paazmaya/yaml-validator/branches/master/shields_badge.svg)](https://semaphoreci.com/paazmaya/yaml-validator)
 [![Windows build status](https://ci.appveyor.com/api/projects/status/rxt9kv7geq8vyny7/branch/master?svg=true)](https://ci.appveyor.com/project/paazmaya/yaml-validator)
 [![code coverage](https://codecov.io/gh/paazmaya/yaml-validator/branch/master/graph/badge.svg)](https://codecov.io/gh/paazmaya/yaml-validator)
+[![dependencies Status](https://david-dm.org/paazmaya/yaml-validator/status.svg)](https://david-dm.org/paazmaya/yaml-validator)
 
 [Yaml](http://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
 and the structure defined in the configuration options is enforced with
