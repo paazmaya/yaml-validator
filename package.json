@@ -6,9 +6,9 @@
   "typings": "typings/index.d.ts",
   "bin": "bin/yaml-validator.js",
   "scripts": {
-    "test": "nyc --exclude tests tape tests/*_test.js",
+    "test": "nyc --all --exclude tests tape tests/*_test.js",
     "test:typings": "tsc -p tsconfig.json",
-    "coverage": "nyc --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "nyc --all --exclude tests report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint index.js bin"
   },
   "repository": {
