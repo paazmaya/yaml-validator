@@ -30,12 +30,12 @@
     "optionator": "^0.8.2"
   },
   "devDependencies": {
-    "@types/node": "^10.12.3",
+    "@types/node": "^10.12.15",
     "codecov": "^3.1.0",
-    "eslint": "^5.8.0",
-    "eslint-config-paazmaya": "^5.0.0",
+    "eslint": "^5.10.0",
+    "eslint-config-paazmaya": "^5.1.0",
     "nyc": "^13.1.0",
     "tape": "^4.9.1",
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.2"
   }
 }
