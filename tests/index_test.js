@@ -82,6 +82,28 @@ tape('Wrong kind of file contents', test => {
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
 
+tape('report() returns 0 if all files are valid', test => {
+  test.plan(2);
+
+  // Failed to load the Yaml file "README.md"
+  const validatorInstance = new Validator();
+  validatorInstance.validate(['appveyor.yml']);
+
+  test.equal(validatorInstance.inValidFilesCount, 0);
+  test.equal(validatorInstance.report(), 0);
+});
+
+tape('report() returns count of invalid files', test => {
+  test.plan(2);
+
+  // Failed to load the Yaml file "README.md"
+  const validatorInstance = new Validator();
+  validatorInstance.validate(['README.md']);
+
+  test.equal(validatorInstance.inValidFilesCount, 1);
+  test.equal(validatorInstance.report(), 1);
+});
+
 tape('report() increments log length by one if no invalid files', test => {
   test.plan(2);
 
