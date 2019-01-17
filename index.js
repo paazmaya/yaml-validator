@@ -206,7 +206,7 @@ YamlValidatore.prototype.validate = function validate(files) {
 
 /**
  * Create a report out of this, but in reality also run.
- * @returns {void}
+ * @returns {number} 0 when no errors, the count of invalid files otherwise.
  */
 YamlValidatore.prototype.report = function report() {
 
@@ -220,6 +220,8 @@ YamlValidatore.prototype.report = function report() {
   if (typeof this.options.log === 'string') {
     fs.writeFileSync(this.options.log, this.logs.join('\n'), 'utf8');
   }
+
+  return this.inValidFilesCount;
 };
 
 module.exports = YamlValidatore;

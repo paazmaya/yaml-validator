@@ -110,4 +110,4 @@ const options = {
 
 const validator = new YamlValidator(options);
 validator.validate([filepath]);
-validator.report();
+process.exitCode = validator.report();

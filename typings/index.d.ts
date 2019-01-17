@@ -15,7 +15,7 @@ declare class YamlValidator {
  constructor(options?: YamlValidator.IYamlValidatorOptions)
 
  validate(files: string[]): void
- report(): void
+ report(): number
 }
 
 declare namespace YamlValidator {
