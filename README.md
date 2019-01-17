@@ -71,10 +71,10 @@ yaml-validator [options] <file>
   -w, --write-json       Write the contents of the Yaml file to a JSON file next to it
   -l, --log-file String  Log file where errors are written
 
-Version 1.1.0
+Version 2.0.0
 ```
 
-When used from the command-line, the process exits with the number of invalid files.
+When used from the command line, the process exits with the number of invalid files.
 
 ## Configuration options
 
@@ -207,6 +207,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v2.0.0` (2019-01-17)
+  - Minimum supported and tested Node.js version is now `v8.11.1`
+  - The command line tool now exists with the number of failed files, previously always exiting with zero (0) #21
 * `v1.3.0` (2018-03-16)
   - Contents of the Yaml file were overwritten, in the case when saving to JSON and the Yaml file suffix was not `.yml` #14
   - TypeScript types are available #13

@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "typings": "typings/index.d.ts",
@@ -26,16 +26,16 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.12.0",
+    "js-yaml": "^3.12.1",
     "optionator": "^0.8.2"
   },
   "devDependencies": {
-    "@types/node": "^10.12.15",
+    "@types/node": "^10.12.18",
     "codecov": "^3.1.0",
-    "eslint": "^5.10.0",
+    "eslint": "^5.12.0",
     "eslint-config-paazmaya": "^5.1.0",
     "nyc": "^13.1.0",
-    "tape": "^4.9.1",
+    "tape": "^4.9.2",
     "typescript": "^3.2.2"
   }
 }
