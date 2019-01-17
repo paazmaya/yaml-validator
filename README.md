@@ -74,7 +74,7 @@ yaml-validator [options] <file>
 Version 1.1.0
 ```
 
-When used from the command-line, the process exits with the count of invalid files.
+When used from the command-line, the process exits with the number of invalid files.
 
 ## Configuration options
 
