@@ -33,7 +33,7 @@
     "@types/node": "10.12.29",
     "codecov": "3.1.0",
     "eslint": "5.15.1",
-    "eslint-config-paazmaya": "5.1.0",
+    "eslint-config-paazmaya": "5.2.0",
     "nyc": "13.3.0",
     "tape": "4.9.2",
     "typescript": "3.2.2"
