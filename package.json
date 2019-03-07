@@ -36,6 +36,6 @@
     "eslint-config-paazmaya": "5.1.0",
     "nyc": "13.3.0",
     "tape": "4.10.1",
-    "typescript": "3.2.2"
+    "typescript": "3.3.3333"
   }
 }
