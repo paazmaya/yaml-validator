@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/node": "10.14.4",
     "codecov": "3.2.0",
-    "eslint": "5.15.3",
+    "eslint": "5.16.0",
     "eslint-config-paazmaya": "5.2.0",
     "nyc": "13.3.0",
     "tape": "4.10.1",
