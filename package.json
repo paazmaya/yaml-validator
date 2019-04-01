@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^3.12.1",
+    "js-yaml": "^3.13.0",
     "optionator": "^0.8.2"
   },
   "devDependencies": {
