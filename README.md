@@ -207,6 +207,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v2.1.0` (2019-04-27)
+  - Use [`npm-shrinkwrap.json`](https://docs.npmjs.com/files/shrinkwrap.json) for locking the working set of 3rd party dependencies
+  - Define `files` property in `package.json` to minify files in the published package
 * `v2.0.0` (2019-01-17)
   - Minimum supported and tested Node.js version is now `v8.11.1`
   - The command line tool now exists with the number of failed files, previously always exiting with zero (0) #21

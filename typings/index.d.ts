@@ -8,23 +8,23 @@
 export = YamlValidator
 
 declare class YamlValidator {
- logs: string[]
- nonValidPaths: string[]
- inValidFilesCount: number
+  logs: string[]
+  nonValidPaths: string[]
+  inValidFilesCount: number
 
- constructor(options?: YamlValidator.IYamlValidatorOptions)
+  constructor(options?: YamlValidator.IYamlValidatorOptions)
 
- validate(files: string[]): void
- report(): number
+  validate(files: string[]): void
+  report(): number
 }
 
 declare namespace YamlValidator {
- export type WarningCallback = (error: Error, filePath: string) => void
+  export type WarningCallback = (error: Error, filePath: string) => void
 
- export interface IYamlValidatorOptions {
-   log?: string | false
-   structure?: object | false
-   onWarning?: WarningCallback
-   writeJson?: boolean
- }
+  export interface IYamlValidatorOptions {
+    log?: string | false
+    structure?: object | false
+    onWarning?: WarningCallback
+    writeJson?: boolean
+  }
 }

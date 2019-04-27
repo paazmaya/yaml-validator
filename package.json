@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "typings": "typings/index.d.ts",
@@ -24,6 +24,14 @@
   "engines": {
     "node": ">=8.11.1"
   },
+  "files": [
+    "bin",
+    "typings",
+    "index.js",
+    "LICENSE",
+    "npm-shrinkwrap.json",
+    "package.json"
+  ],
   "dependencies": {
     "check-type": "^0.4.11",
     "js-yaml": "^3.13.1",
