@@ -15,14 +15,14 @@ const tape = require('tape');
 const Validator = require('../index');
 
 
-tape('Exporting function', test => {
+tape('Exporting function', (test) => {
   test.plan(2);
 
   test.equal(typeof Validator, 'function');
   test.equal(Validator.length, 1);
 });
 
-tape('Validating methods', test => {
+tape('Validating methods', (test) => {
   test.plan(6);
 
   const validatorInstance = new Validator();
@@ -35,7 +35,7 @@ tape('Validating methods', test => {
   test.equal(typeof validatorInstance.report, 'function');
 });
 
-tape('Default parameter values', test => {
+tape('Default parameter values', (test) => {
   test.plan(8);
 
   const validatorInstance = new Validator();
@@ -51,7 +51,7 @@ tape('Default parameter values', test => {
   test.equal(validatorInstance.options.onWarning, null);
 });
 
-tape('Wrong filepath #1', test => {
+tape('Wrong filepath #1', (test) => {
   test.plan(2);
 
   const validatorInstance = new Validator();
@@ -61,7 +61,7 @@ tape('Wrong filepath #1', test => {
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
 
-tape('Wrong filepath #2', test => {
+tape('Wrong filepath #2', (test) => {
   test.plan(2);
 
   const validatorInstance = new Validator();
@@ -71,7 +71,7 @@ tape('Wrong filepath #2', test => {
   test.equal(validatorInstance.inValidFilesCount, 3);
 });
 
-tape('Wrong kind of file contents', test => {
+tape('Wrong kind of file contents', (test) => {
   test.plan(2);
 
   // Failed to load the Yaml file "README.md"
@@ -82,7 +82,7 @@ tape('Wrong kind of file contents', test => {
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
 
-tape('report() returns 0 if all files are valid', test => {
+tape('report() returns 0 if all files are valid', (test) => {
   test.plan(2);
 
   // Failed to load the Yaml file "README.md"
@@ -93,7 +93,7 @@ tape('report() returns 0 if all files are valid', test => {
   test.equal(validatorInstance.report(), 0);
 });
 
-tape('report() returns count of invalid files', test => {
+tape('report() returns count of invalid files', (test) => {
   test.plan(2);
 
   // Failed to load the Yaml file "README.md"
@@ -104,7 +104,7 @@ tape('report() returns count of invalid files', test => {
   test.equal(validatorInstance.report(), 1);
 });
 
-tape('report() increments log length by one if no invalid files', test => {
+tape('report() increments log length by one if no invalid files', (test) => {
   test.plan(2);
 
   const validatorInstance = new Validator();
@@ -117,7 +117,7 @@ tape('report() increments log length by one if no invalid files', test => {
   test.equal(validatorInstance.logs.length, 1);
 });
 
-tape('report() increments log length by two if invalid files present', test => {
+tape('report() increments log length by two if invalid files present', (test) => {
   test.plan(2);
 
   const validatorInstance = new Validator();
@@ -130,7 +130,7 @@ tape('report() increments log length by two if invalid files present', test => {
   test.equal(validatorInstance.logs.length, 3);
 });
 
-tape('Valid Structure', test => {
+tape('Valid Structure', (test) => {
   test.plan(1);
 
   const options = {
@@ -143,25 +143,19 @@ tape('Valid Structure', test => {
         ]
       },
       version: 'string',
-      init: [
-        'string'
-      ],
+      init: ['string'],
       clone_depth: 'number',
       matrix: {
         fast_finish: 'boolean'
       },
-      cache: [
-        'string'
-      ],
+      cache: ['string'],
       install: [
         {
           ps: 'string'
         },
         'string'
       ],
-      test_script: [
-        'string'
-      ],
+      test_script: ['string'],
       build: 'string'
     }
   };
@@ -172,7 +166,7 @@ tape('Valid Structure', test => {
   test.equal(validatorInstance.inValidFilesCount, 0);
 });
 
-tape('Invalid Structure', test => {
+tape('Invalid Structure', (test) => {
   test.plan(1);
 
   const options = {
@@ -184,26 +178,20 @@ tape('Invalid Structure', test => {
           }
         ]
       },
-      init: [
-        'string'
-      ],
+      init: ['string'],
       version: 'string',
       clone_depth: 'number',
       matrix: {
         fast_finish: 'number'
       },
-      cache: [
-        'string'
-      ],
+      cache: ['string'],
       install: [
         {
           ps: 'string'
         },
         'string'
       ],
-      test_script: [
-        'string'
-      ],
+      test_script: ['string'],
       notUsedKey: [],
       build: 'string'
     }
@@ -215,7 +203,7 @@ tape('Invalid Structure', test => {
 });
 
 
-tape('Optional Structure', test => {
+tape('Optional Structure', (test) => {
   test.plan(1);
 
   const options = {
@@ -227,18 +215,14 @@ tape('Optional Structure', test => {
           }
         ]
       },
-      init: [
-        'string'
-      ],
+      init: ['string'],
       'version?': 'string',
       clone_depth: 'number',
       matrix: {
         fast_finish: 'boolean',
         'option field?': 'string'
       },
-      'cache?': [
-        'string'
-      ],
+      'cache?': ['string'],
       'install?': [
         {
           ps: 'string',
@@ -246,14 +230,14 @@ tape('Optional Structure', test => {
         },
         'string'
       ],
-      test_script: [
-        'string'
-      ],
+      test_script: ['string'],
       'build?': 'string',
 
-      'optionalKey?': ["string"],
-      'optionalField?': "string",
-      'optionalProperty?': {'field1?':"string"},
+      'optionalKey?': ['string'],
+      'optionalField?': 'string',
+      'optionalProperty?': {
+        'field1?': 'string'
+      }
     }
   };
 
@@ -263,7 +247,7 @@ tape('Optional Structure', test => {
   test.equal(validatorInstance.inValidFilesCount, 0);
 });
 
-tape('Test creation of JSON file from YAML structure', test => {
+tape('Test creation of JSON file from YAML structure', (test) => {
   test.plan(1);
 
   const options = {
@@ -283,7 +267,7 @@ tape('Test creation of JSON file from YAML structure', test => {
   });
 });
 
-tape('Test creation of Log reports from YAML structure', test => {
+tape('Test creation of Log reports from YAML structure', (test) => {
   test.plan(1);
 
   const options = {
@@ -303,7 +287,7 @@ tape('Test creation of Log reports from YAML structure', test => {
   });
 });
 
-tape('checkFile creates JSON when requested', test => {
+tape('checkFile creates JSON when requested', (test) => {
   test.plan(1);
 
   const name = 'tests/fixtures/just-checking-json-file-appears';
