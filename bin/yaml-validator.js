@@ -31,7 +31,7 @@ catch (error) {
 }
 
 const optsParser = optionator({
-  prepend: `${pkg.name} [options] <file>`,
+  prepend: `${pkg.name} [options] <files>`,
   append: `Version ${pkg.version}`,
   options: [
     {
@@ -83,21 +83,27 @@ if (opts.help) {
   process.exit(0);
 }
 
-if (opts._.length !== 1) {
-  console.error('File not specified');
+if (opts._.length === 0) {
+  console.error('File(s) not specified');
   console.log(optsParser.generateHelp());
   process.exit(1);
 }
 
-const filepath = path.resolve(opts._[0]);
+const resolveFilepath = (input) => {
+  const output = path.resolve(input);
 
-try {
-  fs.accessSync(filepath);
-}
-catch (error) {
-  console.error(`The file "${filepath}" does not exist`);
-  process.exit(1);
-}
+  try {
+    fs.accessSync(output);
+  }
+  catch (error) {
+    console.error(`The file "${output}" does not exist`);
+    process.exit(1);
+  }
+
+  return output;
+};
+
+const files = opts._.map(resolveFilepath);
 
 const options = {
   writeJson: typeof opts.writeJson === 'boolean' ?
@@ -109,5 +115,5 @@ const options = {
 };
 
 const validator = new YamlValidator(options);
-validator.validate([filepath]);
+validator.validate(files);
 process.exitCode = validator.report();

@@ -64,7 +64,7 @@ yaml-validator random_file.yml
 The available options for command line use, can be seen with the help command `yaml-validator -h`, which results in output similar to:
 
 ```sh
-yaml-validator [options] <file>
+yaml-validator [options] <files>
 
   -h, --help             Help and usage instructions
   -V, --version          Version number
@@ -152,7 +152,7 @@ const options = {
         {
           name: 'string',
           id: 'number',
-          'location?':{        
+          'location?':{
             floor: "string",
             building: "string",
           }
@@ -207,6 +207,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v2.2.0` (2019-05-29)
+  - Internally written as ES2015 Class, instead of ES5 way which polluted `prototype`
+  - Allows now more than just one input file via command line
 * `v2.1.0` (2019-04-27)
   - Use [`npm-shrinkwrap.json`](https://docs.npmjs.com/files/shrinkwrap.json) for locking the working set of 3rd party dependencies
   - Define `files` property in `package.json` to minify files in the published package
