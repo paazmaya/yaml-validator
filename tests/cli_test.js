@@ -31,7 +31,7 @@ tape('cli should output help by default', (test) => {
   test.plan(1);
 
   execFile('node', [pkg.bin], null, (err, stdout) => {
-    test.ok(stdout.trim().indexOf('yaml-validator [options] <file>') !== -1, 'Help appeared');
+    test.ok(stdout.trim().indexOf('yaml-validator [options] <files>') !== -1, 'Help appeared');
   });
 
 });
@@ -40,7 +40,7 @@ tape('cli should output help when requested', (test) => {
   test.plan(1);
 
   execFile('node', [pkg.bin, '--help'], null, (err, stdout) => {
-    test.ok(stdout.trim().indexOf('yaml-validator [options] <file>') !== -1, 'Help appeared');
+    test.ok(stdout.trim().indexOf('yaml-validator [options] <files>') !== -1, 'Help appeared');
   });
 
 });
@@ -73,7 +73,7 @@ tape('cli should require a file to be given', (test) => {
   test.plan(1);
 
   execFile('node', [pkg.bin], null, (err, stdout, stderr) => {
-    test.equal(stderr.trim(), 'File not specified');
+    test.equal(stderr.trim(), 'File(s) not specified');
   });
 
 });
@@ -83,6 +83,15 @@ tape('cli realises that file does not exist', (test) => {
 
   execFile('node', [pkg.bin, 'not-here'], null, (err, stdout, stderr) => {
     test.ok(stderr.indexOf('not-here" does not exis') !== -1);
+  });
+
+});
+
+tape('cli realises when of multiple files the first does not exist', (test) => {
+  test.plan(1);
+
+  execFile('node', [pkg.bin, 'not-here-1', 'appveyor.yml'], null, (err, stdout, stderr) => {
+    test.ok(stderr.indexOf('not-here-1" does not exis') !== -1);
   });
 
 });
