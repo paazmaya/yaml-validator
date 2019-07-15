@@ -1,0 +1,45 @@
+globals:
+  consumer:
+    - event: "#/definitions/Register"
+    - event: "#/definitions/Next"
+    - event: "#/definitions/Previous"
+    - event: "#/definitions/Destroy"
+  producer:
+    - event: "#/definitions/Initialize"
+
+apps:
+  - name: "login"
+    consumer:
+      - event: "#/definitions/Register"
+      - event: "#/definitions/Next"
+      - event: "#/definitions/Destroy"
+    producer:
+
+definitions:
+  - event: "Register"
+    name: "[Registration] register"
+    description: "MF registers itself at the CL"
+
+  - event: "Next"
+    name: "[Routing] next"
+    description: "MF tells the CL to route to the next MF"
+
+  - event: "Previous"
+    name: "[Routing] previous"
+    description: "MF tells the CL to route to the previous MF"
+
+  - event: "Initialize"
+    name: "[Lifecycle] initialize"
+    description: "CL may send the MF a configuration and/or a state (e.g. previous state - for-/backwards-navigation)"
+    payload:
+      - name: "config"
+        type: "any"
+      - name: "state"
+        type: "any"
+
+  - event: "Destroy"
+    name: "[Lifecycle] destroy"
+    description: "MF tells the CL that it has been destroyed and may pass the (latest) state"
+    payload:
+      - name: "state"
+        type: "any"

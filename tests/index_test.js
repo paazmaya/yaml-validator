@@ -316,3 +316,63 @@ tape('Wrong kind of file contents trigger onWarning callback', {timeout: 1200}, 
   test.equal(validatorInstance.inValidFilesCount, 1);
 });
 */
+
+
+tape('The case of #70', (test) => {
+  test.plan(1);
+  const structure = {
+    globals: {
+      consumer: [
+        {
+          event: 'string'
+        }
+      ],
+      producer: [
+        {
+          event: 'string'
+        }
+      ]
+    },
+    apps: [
+      {
+        name: 'string',
+        consumer: [
+          {
+            event: 'string'
+          }
+        ],
+        producer: [
+          {
+            event: 'string'
+          }
+        ]
+      }
+    ],
+    definitions: [
+      {
+        event: 'string',
+        name: 'string',
+        description: 'string',
+        'payload?': [
+          {
+            name: 'string',
+            type: 'string'
+          }
+        ]
+      }
+    ]
+  };
+
+  const options = {
+    log: false,
+    structure: structure,
+    onWarning: (error, filepath) => {
+      console.warn(filepath + ' has error: ' + error);
+    },
+    writeJson: false
+  };
+
+  const validatorInstance = new Validator(options);
+  validatorInstance.validate(['tests/fixtures/api.yml']);
+
+});
