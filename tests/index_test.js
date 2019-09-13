@@ -318,7 +318,7 @@ tape('Wrong kind of file contents trigger onWarning callback', {timeout: 1200}, 
 */
 
 
-tape('The case of #70', (test) => {
+tape('The case of #70 - Structure validation', (test) => {
   test.plan(1);
   const structure = {
     globals: {
@@ -374,5 +374,6 @@ tape('The case of #70', (test) => {
 
   const validatorInstance = new Validator(options);
   validatorInstance.validate(['tests/fixtures/api.yml']);
+  test.equal(validatorInstance.inValidFilesCount, 1);
 
 });
