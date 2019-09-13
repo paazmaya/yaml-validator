@@ -13,6 +13,8 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const check = require('check-type').init();
 
+const FIND_LINENUMBER = /line (\d+)/u;
+
 class YamlValidatore {
   constructor (options) {
     this.options = Object.assign({
@@ -112,7 +114,6 @@ class YamlValidatore {
    * @returns {string|null} Parsed Yaml or null on failure
    */
   loadData(filepath, data) {
-
     const onWarning = (error) => {
       this.errored(filepath + ' > ' + error);
       if (typeof this.options.onWarning === 'function') {
@@ -127,7 +128,10 @@ class YamlValidatore {
       });
     }
     catch (error) {
-      const lineNumber = error.message.match(/line (\d+)/u)[1];
+      const findNumber = error.message.match(FIND_LINENUMBER);
+      const lineNumber = findNumber.length > 0 ?
+        findNumber[1] :
+        'unknown';
       this.errored(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);
       console.error(`${filepath}:${lineNumber}\n${error.message}`);
 
