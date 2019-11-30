@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/node": "12.12.14",
     "codecov": "3.6.1",
-    "eslint": "6.7.1",
+    "eslint": "6.7.2",
     "eslint-config-paazmaya": "6.1.0",
     "nyc": "14.1.1",
     "tape": "4.11.0",
