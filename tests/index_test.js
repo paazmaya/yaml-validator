@@ -6,14 +6,11 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
-
 const fs = require('fs');
 
 const tape = require('tape');
 
 const Validator = require('../index');
-
 
 tape('Exporting function', (test) => {
   test.plan(2);
