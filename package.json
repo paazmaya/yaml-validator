@@ -44,6 +44,6 @@
     "eslint-config-paazmaya": "6.1.0",
     "nyc": "15.0.0",
     "tape": "4.13.0",
-    "typescript": "3.8.2"
+    "typescript": "3.8.3"
   }
 }
