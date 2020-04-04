@@ -35,7 +35,7 @@
   "dependencies": {
     "check-type": "^0.4.11",
     "js-yaml": "^3.13.1",
-    "optionator": "^0.8.2"
+    "optionator": "^0.9.0"
   },
   "devDependencies": {
     "@types/node": "12.12.34",
