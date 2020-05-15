@@ -860,9 +860,9 @@
       }
     },
     "eslint-config-paazmaya": {
-      "version": "6.1.0",
-      "resolved": "https://registry.npmjs.org/eslint-config-paazmaya/-/eslint-config-paazmaya-6.1.0.tgz",
-      "integrity": "sha512-Z4N4X16Uy0/mh9ahORY8MuZitv7vPI/k4K1lDrzNSON/6GayVRdOKJ4CwmczKpqu+SUHDjvoFy7dMqQXwafLjw==",
+      "version": "7.0.0",
+      "resolved": "https://registry.npmjs.org/eslint-config-paazmaya/-/eslint-config-paazmaya-7.0.0.tgz",
+      "integrity": "sha512-4jrqGZxAqpSggsYasKcSGrmbCr/5kxechR+TQwJZFBK+6S6Ou+vhFWEL+xTqhCtyt9iS+1IAYuul7dKtdbVttA==",
       "dev": true
     },
     "eslint-scope": {
