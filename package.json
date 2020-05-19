@@ -38,7 +38,7 @@
     "optionator": "^0.9.0"
   },
   "devDependencies": {
-    "@types/node": "12.12.39",
+    "@types/node": "12.12.40",
     "codecov": "3.7.0",
     "eslint": "7.0.0",
     "eslint-config-paazmaya": "7.0.0",
