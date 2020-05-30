@@ -208,6 +208,9 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v3.0.0` (2020-05-30)
+  - Minimum Node.js version lifted from `8.11.1` to `10.13.0`
+  - Test code smells at Sonarcloud.io
 * `v2.2.0` (2019-05-29)
   - Internally written as ES2015 Class, instead of ES5 way which polluted `prototype`
   - Allows now more than just one input file via command line
