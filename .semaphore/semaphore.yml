@@ -1,20 +1,29 @@
 version: v1.0
-name: Test MyApp
+name: Ubuntu18 Based Pipeline
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 
 blocks:
-  - name: Test
+  - name: Test with Node.js v12
     task:
+      prologue:
+        commands:
+          - checkout
+          - sem-version node 12
+          - cache restore
+          - npm install
+          - cache store
       jobs:
-        - name: Test
+        - name: Lint
           commands:
-            - checkout
-            - sem-version node 12
-            - cache restore
-            - npm install
-            - cache store
-            - npm run build --if-present
-            - npm test
+            - npm run lint
+      jobs:
+        - name: Unit test
+          commands:
+          - npm test
+      jobs:
+        - name: TypeScript
+          commands:
+          - npm run test:typings
