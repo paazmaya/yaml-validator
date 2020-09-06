@@ -19,11 +19,9 @@ blocks:
         - name: Lint
           commands:
             - npm run lint
-      jobs:
         - name: Unit test
           commands:
           - npm test
-      jobs:
         - name: TypeScript
           commands:
           - npm run test:typings
