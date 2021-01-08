@@ -121,13 +121,13 @@ class YamlValidatore {
     let doc;
 
     try {
-      doc = yaml.safeLoad(data, {
+      doc = yaml.load(data, {
         onWarning: onWarning
       });
     }
     catch (error) {
       const findNumber = error.message.match(FIND_LINENUMBER);
-      const lineNumber = findNumber.length > 0 ?
+      const lineNumber = findNumber && findNumber.length > 0 ?
         findNumber[1] :
         'unknown';
       this.errored(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);

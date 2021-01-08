@@ -106,7 +106,7 @@ Type: `function`
 
 Default value: `null`
 
-One of the options passed to [`safeload` method of `js-yaml`](https://github.com/nodeca/js-yaml#safeload-string---options-).
+One of the options passed to [`load` method of `js-yaml`](https://github.com/nodeca/js-yaml#load-string---options-).
 
 Please note that the `onWarning` callback is being used by this library and any method written for it,
 will be run after the one implemented in this library.
