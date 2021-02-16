@@ -208,6 +208,8 @@ Please make sure it is over 90% at all times.
 
 ## Release History
 
+* `v3.0.1` (2021-02-16)
+  - Dependency update of the yaml parser used underneath, called `js-yaml`
 * `v3.0.0` (2020-05-30)
   - Minimum Node.js version lifted from `8.11.1` to `10.13.0`
   - Test code smells at Sonarcloud.io
