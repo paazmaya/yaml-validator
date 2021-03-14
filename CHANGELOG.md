@@ -1,9 +1,9 @@
-# Version history for eslint-config-paazmaya
+# Version history for yaml-validator
 
 This changelog covers the version history and possible upcoming changes.
 It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
-## [Unreleased]
+## Unreleased
 
 ## `v3.0.1` (2021-02-16)
 - Dependency update of the yaml parser used underneath, called `js-yaml`
