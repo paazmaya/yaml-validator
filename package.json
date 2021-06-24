@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/paazmaya/yaml-validator#readme",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=14.15.0"
   },
   "files": [
     "bin",
