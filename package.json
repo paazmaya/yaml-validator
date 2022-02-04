@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "typings": "typings/index.d.ts",
@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "check-type": "^0.4.11",
-    "js-yaml": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "optionator": "^0.9.1"
   },
   "devDependencies": {
