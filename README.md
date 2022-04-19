@@ -2,7 +2,7 @@
 
 > Validate Yaml files and enforce a given structure
 
-[![Ubuntu Build Status](https://paazmaya.semaphoreci.com/badges/yaml-validator.svg)](https://paazmaya.semaphoreci.com/projects/yaml-validator)
+[![Ubuntu Build Status](https://paazmaya.semaphoreci.com/badges/yaml-validator/branches/master.svg)](https://paazmaya.semaphoreci.com/projects/yaml-validator)
 [![Windows build status](https://ci.appveyor.com/api/projects/status/rxt9kv7geq8vyny7/branch/master?svg=true)](https://ci.appveyor.com/project/paazmaya/yaml-validator)
 [![code coverage](https://codecov.io/gh/paazmaya/yaml-validator/branch/master/graph/badge.svg)](https://codecov.io/gh/paazmaya/yaml-validator)
 
