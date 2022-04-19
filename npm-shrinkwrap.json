@@ -9,9 +9,9 @@
       "version": "4.0.0",
       "license": "MIT",
       "dependencies": {
-        "check-type": "^0.4.11",
-        "js-yaml": "^4.1.0",
-        "optionator": "^0.9.1"
+        "check-type": "0.4.11",
+        "js-yaml": "4.1.0",
+        "optionator": "0.9.1"
       },
       "bin": {
         "yaml-validator": "bin/yaml-validator.js"
@@ -2235,7 +2235,6 @@
       "version": "0.4.1",
       "resolved": "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz",
       "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
-      "dev": true,
       "dependencies": {
         "prelude-ls": "^1.2.1",
         "type-check": "~0.4.0"
@@ -2602,7 +2601,6 @@
       "version": "1.2.1",
       "resolved": "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz",
       "integrity": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==",
-      "dev": true,
       "engines": {
         "node": ">= 0.8.0"
       }
@@ -3061,7 +3059,6 @@
       "version": "0.4.0",
       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz",
       "integrity": "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==",
-      "dev": true,
       "dependencies": {
         "prelude-ls": "^1.2.1"
       },
@@ -5057,7 +5054,6 @@
       "version": "0.4.1",
       "resolved": "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz",
       "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
-      "dev": true,
       "requires": {
         "prelude-ls": "^1.2.1",
         "type-check": "~0.4.0"
@@ -5333,8 +5329,7 @@
     "prelude-ls": {
       "version": "1.2.1",
       "resolved": "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz",
-      "integrity": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==",
-      "dev": true
+      "integrity": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
     },
     "process-on-spawn": {
       "version": "1.0.0",
@@ -5694,7 +5689,6 @@
       "version": "0.4.0",
       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz",
       "integrity": "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==",
-      "dev": true,
       "requires": {
         "prelude-ls": "^1.2.1"
       }
