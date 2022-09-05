@@ -17,7 +17,7 @@
         "yaml-validator": "bin/yaml-validator.js"
       },
       "devDependencies": {
-        "@types/node": "14.18.26",
+        "@types/node": "14.18.27",
         "codecov": "3.8.3",
         "eslint": "8.23.0",
         "eslint-config-paazmaya": "8.0.0",
@@ -463,9 +463,9 @@
       "dev": true
     },
     "node_modules/@types/node": {
-      "version": "14.18.26",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.18.26.tgz",
-      "integrity": "sha512-0b+utRBSYj8L7XAp0d+DX7lI4cSmowNaaTkk6/1SKzbKkG+doLuPusB9EOvzLJ8ahJSk03bTLIL6cWaEd4dBKA==",
+      "version": "14.18.27",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.18.27.tgz",
+      "integrity": "sha512-DcTUcwT9xEcf4rp2UHyGAcmlqG4Mhe7acozl5vY2xzSrwP1z19ZVyjzQ6DsNUrvIadpiyZoQCTHFt4t2omYIZQ==",
       "dev": true
     },
     "node_modules/acorn": {
@@ -4157,9 +4157,9 @@
       "dev": true
     },
     "@types/node": {
-      "version": "14.18.26",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.18.26.tgz",
-      "integrity": "sha512-0b+utRBSYj8L7XAp0d+DX7lI4cSmowNaaTkk6/1SKzbKkG+doLuPusB9EOvzLJ8ahJSk03bTLIL6cWaEd4dBKA==",
+      "version": "14.18.27",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.18.27.tgz",
+      "integrity": "sha512-DcTUcwT9xEcf4rp2UHyGAcmlqG4Mhe7acozl5vY2xzSrwP1z19ZVyjzQ6DsNUrvIadpiyZoQCTHFt4t2omYIZQ==",
       "dev": true
     },
     "acorn": {
