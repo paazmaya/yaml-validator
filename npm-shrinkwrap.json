@@ -24,7 +24,7 @@
         "eslint-plugin-node": "11.1.0",
         "nyc": "15.1.0",
         "tape": "5.6.0",
-        "typescript": "4.8.2"
+        "typescript": "4.8.3"
       },
       "engines": {
         "node": ">=14.15.0"
@@ -3513,9 +3513,9 @@
       }
     },
     "node_modules/typescript": {
-      "version": "4.8.2",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
-      "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
+      "version": "4.8.3",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.3.tgz",
+      "integrity": "sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==",
       "dev": true,
       "bin": {
         "tsc": "bin/tsc",
@@ -6419,9 +6419,9 @@
       }
     },
     "typescript": {
-      "version": "4.8.2",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz",
-      "integrity": "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==",
+      "version": "4.8.3",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.8.3.tgz",
+      "integrity": "sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==",
       "dev": true
     },
     "unbox-primitive": {
