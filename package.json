@@ -3,13 +3,14 @@
   "version": "4.0.0",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
+  "type": "module",
   "typings": "typings/index.d.ts",
   "bin": "bin/yaml-validator.js",
   "scripts": {
     "test": "nyc --all --exclude tests --exclude typings tape tests/*_test.js",
     "test:typings": "tsc -p tsconfig.json",
     "coverage": "nyc --all --exclude tests --exclude typings report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "eslint index.js bin"
+    "lint": "eslint *.js bin"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
     "@types/node": "14.18.33",
     "codecov": "3.8.3",
     "eslint": "8.28.0",
-    "eslint-config-paazmaya": "8.0.0",
+    "eslint-config-paazmaya": "9.0.0",
     "eslint-plugin-node": "11.1.0",
     "nyc": "15.1.0",
     "tape": "5.6.1",
