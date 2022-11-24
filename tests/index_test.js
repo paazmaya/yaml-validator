@@ -6,11 +6,11 @@
  * Licensed under the MIT license.
  */
 
-const fs = require('fs');
+import fs from 'fs';
 
-const tape = require('tape');
+import tape from 'tape';
 
-const Validator = require('../index');
+import Validator from '../index.js';
 
 tape('Exporting function', (test) => {
   test.plan(2);

@@ -6,15 +6,15 @@
  * Licensed under the MIT license.
  */
 
-const fs = require('fs'),
-  path = require('path'),
-  {
+import fs from 'fs';
+import path from 'path';
+import {
     execFile
-  } = require('child_process');
+} from 'child_process';
 
-const tape = require('tape');
+import tape from 'tape';
 
-const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8'));
+import pkg from '../package.json' assert { type: 'json' };
 
 tape('cli should output version number', (test) => {
   test.plan(1);
@@ -52,21 +52,6 @@ tape('cli should output help when requested', (test) => {
 
 });
 
-tape('cli should complain when package.json is gone', (test) => {
-  test.plan(1);
-
-  const nameFrom = 'package.json',
-    nameTo = '_package.json';
-
-  fs.renameSync(nameFrom, nameTo);
-
-  execFile('node', [pkg.bin, '-h'], null, (err, stdout, stderr) => {
-    test.ok(stderr.trim().indexOf('Could not read') !== -1, 'Complaint seen');
-    fs.renameSync(nameTo, nameFrom);
-  });
-
-});
-
 tape('cli should complain when non existing option used', (test) => {
   test.plan(1);
 
@@ -80,7 +65,7 @@ tape('cli should require a file to be given', (test) => {
   test.plan(1);
 
   execFile('node', [pkg.bin], null, (err, stdout, stderr) => {
-    test.equal(stderr.trim(), 'File(s) not specified');
+    test.ok(stderr.trim().indexOf('File(s) not specified') !== -1, 'Message seen');
   });
 
 });

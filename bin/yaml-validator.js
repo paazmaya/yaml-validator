@@ -8,25 +8,14 @@
  * Licensed under the MIT license.
  */
 
-const fs = require('fs'),
-  path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const optionator = require('optionator');
+import optionator from 'optionator';
 
-const YamlValidator = require('../index');
+import YamlValidator from '../index.js';
 
-let pkg;
-
-try {
-  const packageJson = fs.readFileSync(path.join(__dirname, '..', 'package.json'), 'utf8');
-
-  pkg = JSON.parse(packageJson);
-}
-catch (error) {
-  console.error('Could not read/parse "package.json", quite strange...');
-  console.error(error);
-  process.exit(1);
-}
+import pkg from '../package.json' assert { type: 'json' };
 
 const optsParser = optionator({
   prepend: `${pkg.name} [options] <files>`,

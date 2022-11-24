@@ -6,10 +6,12 @@
  * Licensed under the MIT license.
  */
 
-const fs = require('fs');
+import fs from 'fs';
 
-const yaml = require('js-yaml');
-const check = require('check-type').init();
+import yaml from 'js-yaml';
+import checkType from 'check-type';
+
+const check = checkType.init();
 
 const FIND_LINENUMBER = /line (\d+)/u;
 
@@ -228,4 +230,4 @@ class YamlValidatore {
   }
 }
 
-module.exports = YamlValidatore;
+export default YamlValidatore;
