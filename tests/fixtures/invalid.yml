@@ -1,0 +1,8 @@
+globals:
+  consumer:
+  - event: "#/definitions/Register"
+    - event: "#/definitions/Next"
+    - event: "#/definitions/Previous"
+    - event: "#/definitions/Destroy"
+  producer:
+    - event: "#/definitions/Initialize"
