@@ -13,7 +13,7 @@ import checkType from 'check-type';
 
 const check = checkType.init();
 
-const FIND_LINENUMBER = /line (\d+)/u;
+const FIND_LINENUMBER = /(\d+):\d+/u;
 
 class YamlValidatore {
   constructor (options) {
@@ -132,8 +132,8 @@ class YamlValidatore {
       const lineNumber = findNumber && findNumber.length > 0 ?
         findNumber[1] :
         'unknown';
-      this.errored(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);
       console.error(`${filepath}:${lineNumber}\n${error.message}`);
+      onWarning(`Failed to load the Yaml file "${filepath}:${lineNumber}"\n${error.message}`);
 
       return null;
     }

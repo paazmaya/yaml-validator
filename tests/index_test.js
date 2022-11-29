@@ -9,6 +9,7 @@
 import fs from 'fs';
 
 import tape from 'tape';
+import sinon from 'sinon';
 
 import Validator from '../index.js';
 
@@ -372,5 +373,32 @@ tape('The case of #70 - Structure validation', (test) => {
   const validatorInstance = new Validator(options);
   validatorInstance.validate(['tests/fixtures/api.yml']);
   test.equal(validatorInstance.inValidFilesCount, 1);
+
+});
+
+tape('Calls onWarning if invalid yaml', (test) => {
+  test.plan(2);
+
+  const onWarning = sinon.spy();
+
+  const validatorInstance = new Validator({
+    onWarning
+  });
+  validatorInstance.validate(['tests/fixtures/invalid.yml']);
+
+  test.true(onWarning.calledOnce);
+  test.true(onWarning.calledOnceWithExactly(
+    'Failed to load the Yaml file "tests/fixtures/invalid.yml:4"\n' +
+    'bad indentation of a sequence entry (4:5)\n' +
+      '\n' +
+      ' 1 | globals:\n' +
+      ' 2 |   consumer:\n' +
+      ' 3 |   - event: "#/definitions/Register"\n' +
+      ' 4 |     - event: "#/definitions/Next"\n' +
+      '---------^\n' +
+      ' 5 |     - event: "#/definitions/Previous"\n' +
+      ' 6 |     - event: "#/definitions/Destroy"',
+    'tests/fixtures/invalid.yml'
+  ));
 
 });
