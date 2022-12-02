@@ -7,9 +7,9 @@
   "typings": "typings/index.d.ts",
   "bin": "bin/yaml-validator.js",
   "scripts": {
-    "test": "c8 --all --exclude tests --exclude typings tape tests/*_test.js",
+    "test": "c8 --exclude tests --exclude typings tape tests/*_test.js",
     "test:typings": "tsc -p tsconfig.json",
-    "coverage": "c8 --all --exclude tests --exclude typings report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage": "c8 --exclude tests --exclude typings report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint *.js bin tests"
   },
   "repository": {
