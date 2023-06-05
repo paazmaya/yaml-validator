@@ -49,6 +49,19 @@ tape('Default parameter values', (test) => {
   test.equal(validatorInstance.options.onWarning, null);
 });
 
+tape('Empty file contents', (test) => {
+  test.plan(3);
+
+  const validatorInstance = new Validator();
+  validatorInstance.validate(['tests/fixtures/empty.yml']);
+
+  test.equal(validatorInstance.logs.length, 0); // validateStructure does not complain hence zero
+  test.equal(validatorInstance.inValidFilesCount, 1);
+
+  const isInvalid = validatorInstance.checkFile('tests/fixtures/empty.yml');
+  test.equal(isInvalid, 1);
+});
+
 tape('Wrong filepath #1', (test) => {
   test.plan(2);
 
