@@ -6,12 +6,12 @@ agent:
     os_image: ubuntu1804
 
 blocks:
-  - name: Test with Node.js v14
+  - name: Test with Node.js v18
     task:
       prologue:
         commands:
           - checkout
-          - sem-version node 14
+          - sem-version node 18
           - cache restore
           - npm install
           - cache store
