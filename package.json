@@ -1,6 +1,6 @@
 {
   "name": "yaml-validator",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "type": "module",
