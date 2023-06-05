@@ -1,9 +1,12 @@
+# https://docs.semaphoreci.com/programming-languages/javascript-and-node-js/
+
 version: v1.0
+
 name: Ubuntu18 Based Pipeline
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu1804
+    type: e2-standard-2
+    os_image: ubuntu2204
 
 blocks:
   - name: Test with Node.js v18
