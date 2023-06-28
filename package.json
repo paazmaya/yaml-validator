@@ -4,11 +4,11 @@
   "description": "Validate Yaml files and enforce a given structure",
   "main": "index.js",
   "type": "module",
-  "typings": "typings/index.d.ts",
+  "typings": "types",
   "bin": "bin/yaml-validator.js",
   "scripts": {
-    "test": "c8 --exclude tests --exclude typings tape tests/*_test.js",
-    "test:typings": "tsc -p tsconfig.json",
+    "test": "c8 --exclude tests --exclude types tape tests/*_test.js",
+    "typings": "tsc",
     "coverage": "c8 --exclude tests --exclude typings report --reporter=text-lcov > coverage.lcov && codecov",
     "lint": "eslint *.js bin tests"
   },
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/paazmaya/yaml-validator#readme",
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=18.12.0"
   },
   "files": [
     "bin",
-    "typings",
+    "types",
     "index.js",
     "LICENSE",
     "npm-shrinkwrap.json",
@@ -39,7 +39,7 @@
     "optionator": "0.9.3"
   },
   "devDependencies": {
-    "@types/node": "14.18.52",
+    "@types/node": "18.16.18",
     "c8": "8.0.0",
     "codecov": "3.8.3",
     "eslint": "8.43.0",
@@ -47,6 +47,6 @@
     "eslint-plugin-node": "11.1.0",
     "sinon": "15.2.0",
     "tape": "5.6.3",
-    "typescript": "4.9.5"
+    "typescript": "5.1.5"
   }
 }

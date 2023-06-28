@@ -1,20 +1,23 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es2020",
     "lib": [
-      "es6"
+      "es2020"
+    ],
+    "types": [
+      "node"
     ],
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "types": [
-      "node"
-    ],
-    "noEmit": true,
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "types",
+    "allowJs": true,
     "forceConsistentCasingInFileNames": true
   },
-  "files": [
-    "typings/index.d.ts",
-    "typings/yaml-validator-tests.ts"
+  "include": [
+      "index.js"
   ]
 }
