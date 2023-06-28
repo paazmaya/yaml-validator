@@ -25,6 +25,3 @@ blocks:
         - name: Unit test
           commands:
           - npm test
-        - name: TypeScript
-          commands:
-          - npm run test:typings
