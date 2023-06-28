@@ -71,7 +71,7 @@ yaml-validator [options] <files>
   -w, --write-json       Write the contents of the Yaml file to a JSON file next to it
   -l, --log-file String  Log file where errors are written
 
-Version 2.0.0
+Version 5.0.0
 ```
 
 When used from the command line, the process exits with the number of invalid files.

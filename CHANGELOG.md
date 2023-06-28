@@ -5,6 +5,8 @@ It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
 ## Unreleased
 
+## `v5.0.0` (2023-06-28)
+
 - Minimum supported Node.js version lifted from `14.15.0` to `18.12.0`
 - Typescript type dictionaries were not generated properly
 

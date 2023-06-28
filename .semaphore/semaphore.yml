@@ -9,12 +9,12 @@ agent:
     os_image: ubuntu2004
 
 blocks:
-  - name: Test with Node.js v18
+  - name: Test with Node.js v20
     task:
       prologue:
         commands:
           - checkout
-          - sem-version node 18
+          - sem-version node 20
           - cache restore
           - npm install
           - cache store
