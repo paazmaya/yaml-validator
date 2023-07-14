@@ -415,3 +415,18 @@ tape('Calls onWarning if invalid yaml', (test) => {
   ));
 
 });
+
+tape('Calls onWarning if empty yaml', (test) => {
+  test.plan(1);
+
+  const onWarning = sinon.spy();
+
+  const validatorInstance = new Validator({
+    onWarning
+  });
+  validatorInstance.validate(['tests/fixtures/empty.yml']);
+
+  test.true(onWarning.calledOnceWithExactly(
+    'File is empty', 'tests/fixtures/empty.yml'
+  ));
+});
