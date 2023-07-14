@@ -126,6 +126,13 @@ class YamlValidatore {
       doc = yaml.load(data, {
         onWarning: onWarning
       });
+
+      // i.e empty yml file
+      if (!doc) {
+        onWarning('File is empty');
+
+        return null;
+      }
     }
     catch (error) {
       const findNumber = error.message.match(FIND_LINENUMBER);
