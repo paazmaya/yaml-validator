@@ -44,7 +44,7 @@ declare class YamlValidatore {
      * @param {array} files List of files that have been checked that they exist
      * @returns {void}
      */
-    validate(files: array): void;
+    validate(files: string[]): void;
     /**
      * Create a report out of this, but in reality also run.
      * @returns {number} 0 when no errors, the count of invalid files otherwise.
