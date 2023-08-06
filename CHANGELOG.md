@@ -5,6 +5,11 @@ It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
 ## Unreleased
 
+## `v5.1.0` (2023-08-07)
+
+- Fix incorrect array type in Typescript dictionary file #515
+- Trigger `onWarning` callback when the input Yaml file is empty #507
+
 ## `v5.0.0` (2023-06-28)
 
 - Minimum supported Node.js version lifted from `14.15.0` to `18.12.0`
