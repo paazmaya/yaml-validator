@@ -17,7 +17,7 @@
         "yaml-validator": "bin/yaml-validator.js"
       },
       "devDependencies": {
-        "@types/node": "18.18.7",
+        "@types/node": "18.18.13",
         "c8": "8.0.1",
         "codecov": "3.8.3",
         "eslint": "8.52.0",
@@ -302,9 +302,9 @@
       "dev": true
     },
     "node_modules/@types/node": {
-      "version": "18.18.7",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.18.7.tgz",
-      "integrity": "sha512-bw+lEsxis6eqJYW8Ql6+yTqkE6RuFtsQPSe5JxXbqYRFQEER5aJA9a5UH9igqDWm3X4iLHIKOHlnAXLM4mi7uQ==",
+      "version": "18.18.13",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.18.13.tgz",
+      "integrity": "sha512-vXYZGRrSCreZmq1rEjMRLXJhiy8MrIeVasx+PCVlP414N7CJLHnMf+juVvjdprHyH+XRy3zKZLHeNueOpJCn0g==",
       "dev": true,
       "dependencies": {
         "undici-types": "~5.26.4"
@@ -3437,9 +3437,9 @@
       "dev": true
     },
     "@types/node": {
-      "version": "18.18.7",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.18.7.tgz",
-      "integrity": "sha512-bw+lEsxis6eqJYW8Ql6+yTqkE6RuFtsQPSe5JxXbqYRFQEER5aJA9a5UH9igqDWm3X4iLHIKOHlnAXLM4mi7uQ==",
+      "version": "18.18.13",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.18.13.tgz",
+      "integrity": "sha512-vXYZGRrSCreZmq1rEjMRLXJhiy8MrIeVasx+PCVlP414N7CJLHnMf+juVvjdprHyH+XRy3zKZLHeNueOpJCn0g==",
       "dev": true,
       "requires": {
         "undici-types": "~5.26.4"
