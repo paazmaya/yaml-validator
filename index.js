@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-import fs from 'fs';
+import fs from 'node:fs';
 
 import yaml from 'js-yaml';
 import checkType from 'check-type';

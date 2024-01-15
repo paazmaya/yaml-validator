@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-import fs from 'fs';
+import fs from 'node:fs';
 
 import tape from 'tape';
 import sinon from 'sinon';
