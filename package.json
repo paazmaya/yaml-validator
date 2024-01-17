@@ -39,7 +39,7 @@
     "optionator": "0.9.3"
   },
   "devDependencies": {
-    "@types/node": "20.11.4",
+    "@types/node": "20.11.5",
     "c8": "9.1.0",
     "codecov": "3.8.3",
     "eslint": "8.56.0",
