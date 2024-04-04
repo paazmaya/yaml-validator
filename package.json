@@ -47,6 +47,6 @@
     "eslint-plugin-node": "11.1.0",
     "sinon": "17.0.1",
     "tape": "5.7.5",
-    "typescript": "5.3.3"
+    "typescript": "5.4.4"
   }
 }
