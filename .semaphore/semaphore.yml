@@ -1,20 +1,19 @@
-# https://docs.semaphoreci.com/programming-languages/javascript-and-node-js/
-
+# https://docs.semaphoreci.com/reference/pipeline-yaml
 version: v1.0
-
 name: Ubuntu Based Pipeline
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu2004
+    type: e2-standard-2
+    # https://docs.semaphoreci.com/reference/os-ubuntu-images/ubuntu-2204-image
+    os_image: ubuntu2204
 
 blocks:
-  - name: Test with Node.js v20
+  - name: Test with Node.js v22
     task:
       prologue:
         commands:
           - checkout
-          - sem-version node 20
+          - sem-version node 22
           - cache restore
           - npm install
           - cache store
