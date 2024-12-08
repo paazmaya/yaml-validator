@@ -3,12 +3,9 @@ version: v1.0
 name: Ubuntu Based Pipeline
 agent:
   machine:
-    type: a2-standard-4
-    # https://docs.semaphoreci.com/reference/os-apple
-    os_image: macos-xcode16
-    #type: e1-standard-2
+    type: e1-standard-1
     # https://docs.semaphoreci.com/reference/os-ubuntu-images/ubuntu-2204-image
-    #os_image: ubuntu2204
+    os_image: ubuntu2004
 
 blocks:
   - name: Test with Node.js v22
