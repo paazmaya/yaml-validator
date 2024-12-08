@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "types": "types",
-  "bin": "bin/yaml-validator.js",
+  "bin": {
+    "yaml-validator": "bin/yaml-validator.js"
+  },
   "scripts": {
     "test": "c8 --exclude tests --exclude types tape tests/*_test.js",
     "typings": "tsc",
