@@ -3,7 +3,7 @@ version: v1.0
 name: Ubuntu Based Pipeline
 agent:
   machine:
-    type: e2-standard-2
+    type: e1-standard-2
     # https://docs.semaphoreci.com/reference/os-ubuntu-images/ubuntu-2204-image
     os_image: ubuntu2204
 
