@@ -55,7 +55,7 @@ tape('Empty file contents', (test) => {
   const validatorInstance = new Validator();
   validatorInstance.validate(['tests/fixtures/empty.yml']);
 
-  test.equal(validatorInstance.logs.length, 0); // validateStructure does not complain hence zero
+  test.equal(validatorInstance.logs.length, 1);
   test.equal(validatorInstance.inValidFilesCount, 1);
 
   const isInvalid = validatorInstance.checkFile('tests/fixtures/empty.yml');

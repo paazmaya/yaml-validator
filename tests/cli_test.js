@@ -20,7 +20,7 @@ const pkg = JSON.parse(fs.readFileSync(packageFile, 'utf8'));
 tape('cli should output version number', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, '-V'], null, (error, stdout) => {
+  execFile('node', [pkg.bin[pkg.name], '-V'], null, (error, stdout) => {
     if (error) {
       test.fail(error);
     }
@@ -32,7 +32,7 @@ tape('cli should output version number', (test) => {
 tape('cli should output help by default', (test) => {
   test.plan(2);
 
-  execFile('node', [pkg.bin], null, (error, stdout) => {
+  execFile('node', [pkg.bin[pkg.name]], null, (error, stdout) => {
     if (error) {
       test.ok('Exists with non-zero code');
     }
@@ -44,7 +44,7 @@ tape('cli should output help by default', (test) => {
 tape('cli should output help when requested', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, '--help'], null, (error, stdout) => {
+  execFile('node', [pkg.bin[pkg.name], '--help'], null, (error, stdout) => {
     if (error) {
       test.fail(error);
     }
@@ -56,7 +56,7 @@ tape('cli should output help when requested', (test) => {
 tape('cli should complain when non existing option used', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, '-g'], null, (err, stdout, stderr) => {
+  execFile('node', [pkg.bin[pkg.name], '-g'], null, (err, stdout, stderr) => {
     test.ok(stderr.trim().indexOf('Invalid option ') !== -1, 'Complaint seen');
   });
 
@@ -65,7 +65,7 @@ tape('cli should complain when non existing option used', (test) => {
 tape('cli should require a file to be given', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin], null, (err, stdout, stderr) => {
+  execFile('node', [pkg.bin[pkg.name]], null, (err, stdout, stderr) => {
     test.ok(stderr.trim().indexOf('File(s) not specified') !== -1, 'Message seen');
   });
 
@@ -74,7 +74,7 @@ tape('cli should require a file to be given', (test) => {
 tape('cli realises that file does not exist', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, 'not-here'], null, (err, stdout, stderr) => {
+  execFile('node', [pkg.bin[pkg.name], 'not-here'], null, (err, stdout, stderr) => {
     test.ok(stderr.indexOf('not-here" does not exis') !== -1);
   });
 
@@ -83,7 +83,7 @@ tape('cli realises that file does not exist', (test) => {
 tape('cli realises when of multiple files the first does not exist', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, 'not-here-1', 'appveyor.yml'], null, (err, stdout, stderr) => {
+  execFile('node', [pkg.bin[pkg.name], 'not-here-1', 'appveyor.yml'], null, (err, stdout, stderr) => {
     test.ok(stderr.indexOf('not-here-1" does not exis') !== -1);
   });
 
@@ -92,7 +92,7 @@ tape('cli realises when of multiple files the first does not exist', (test) => {
 tape('cli executes when file exists', (test) => {
   test.plan(1);
 
-  execFile('node', [pkg.bin, 'appveyor.yml'], null, (err, stdout) => {
+  execFile('node', [pkg.bin[pkg.name], 'appveyor.yml'], null, (err, stdout) => {
     test.equal(stdout.trim(), '', 'No output expected');
   });
 
@@ -111,7 +111,7 @@ tape('cli writes json when requested', (test) => {
     test.pass('JSON counterpart does not exists before');
   }
 
-  execFile('node', [pkg.bin, 'appveyor.yml', '-w'], null, (err, stdout) => {
+  execFile('node', [pkg.bin[pkg.name], 'appveyor.yml', '-w'], null, (err, stdout) => {
     test.equal(stdout.trim(), '', 'No output expected');
 
     try {
@@ -140,7 +140,7 @@ tape('cli writes log file when requested', (test) => {
     test.pass('JSON counterpart does not exists before');
   }
 
-  execFile('node', [pkg.bin, 'appveyor.yml', '-l', logFile], null, (err, stdout) => {
+  execFile('node', [pkg.bin[pkg.name], 'appveyor.yml', '-l', logFile], null, (err, stdout) => {
     test.equal(stdout.trim(), '', 'No output expected');
 
     try {
