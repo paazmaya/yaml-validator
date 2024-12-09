@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@types/node": "20.17.9",
-    "c8": "9.1.0",
+    "c8": "10.1.2",
     "codecov": "3.8.3",
     "eslint": "8.57.1",
     "eslint-config-paazmaya": "9.0.1",
