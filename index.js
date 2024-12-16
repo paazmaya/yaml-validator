@@ -161,7 +161,7 @@ class YamlValidatore {
     try {
       data = fs.readFileSync(filepath, 'utf8');
     }
-    catch (err) {
+    catch {
       _self.errored(filepath + ' > No such file or directory');
 
       return null;

@@ -107,7 +107,7 @@ tape('cli writes json when requested', (test) => {
     fs.accessSync(jsonFile);
     test.fail('JSON counterpart existed before');
   }
-  catch (error) {
+  catch {
     test.pass('JSON counterpart does not exists before');
   }
 
@@ -119,7 +119,7 @@ tape('cli writes json when requested', (test) => {
       test.pass('JSON counterpart exists');
       fs.unlinkSync(jsonFile); // clean up
     }
-    catch (error) {
+    catch {
       test.fail('JSON counterpart does not exists after');
     }
 
@@ -136,7 +136,7 @@ tape('cli writes log file when requested', (test) => {
     fs.accessSync(logFile);
     test.fail('JSON counterpart existed before');
   }
-  catch (error) {
+  catch {
     test.pass('JSON counterpart does not exists before');
   }
 
@@ -148,7 +148,7 @@ tape('cli writes log file when requested', (test) => {
       test.pass('JSON counterpart exists');
       fs.unlinkSync(logFile); // clean up
     }
-    catch (error) {
+    catch {
       test.fail('JSON counterpart does not exists after');
     }
 

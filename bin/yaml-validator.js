@@ -84,7 +84,7 @@ const resolveFilepath = (input) => {
   try {
     fs.accessSync(output);
   }
-  catch (error) {
+  catch {
     console.error(`The file "${output}" does not exist`);
     process.exit(1);
   }
