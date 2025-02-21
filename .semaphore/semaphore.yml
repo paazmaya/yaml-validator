@@ -24,12 +24,9 @@ blocks:
           commands:
             - npm run lint
 
-        - name: Unit test
+        - name: Unit test and coverage
           commands:
             - npm test
-
-        - name: Coverage
-          commands:
             - npm run coverage
             - curl -Os https://cli.codecov.io/latest/linux/codecov
             - chmod +x codecov
