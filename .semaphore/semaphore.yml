@@ -17,7 +17,8 @@ blocks:
           - cache restore
           - npm install
           - cache store
-
+      secrets:
+        - name: codecov.io
       jobs:
         - name: Lint
           commands:
@@ -32,4 +33,4 @@ blocks:
           commands:
             - curl -Os https://cli.codecov.io/latest/linux/codecov
             - chmod +x codecov
-            - ./codecov upload-process -t ${{ secrets.CODECOV_TOKEN }}
+            - ./codecov upload-process -t $CODECOV_TOKEN
