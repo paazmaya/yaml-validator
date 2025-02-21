@@ -27,10 +27,10 @@ blocks:
         - name: Unit test
           commands:
             - npm test
-            - npm run coverage
 
         - name: Coverage
           commands:
+            - npm run coverage
             - curl -Os https://cli.codecov.io/latest/linux/codecov
             - chmod +x codecov
             - ./codecov upload-process -t $CODECOV_TOKEN
