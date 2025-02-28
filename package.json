@@ -48,6 +48,6 @@
     "eslint-plugin-n": "17.15.1",
     "sinon": "19.0.2",
     "tape": "5.9.0",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   }
 }
