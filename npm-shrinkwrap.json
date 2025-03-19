@@ -22,7 +22,7 @@
         "eslint": "9.22.0",
         "eslint-config-paazmaya": "9.0.1",
         "eslint-plugin-n": "17.16.2",
-        "sinon": "19.0.2",
+        "sinon": "19.0.4",
         "tape": "5.9.0",
         "typescript": "5.8.2"
       },
@@ -2835,13 +2835,13 @@
       }
     },
     "node_modules/sinon": {
-      "version": "19.0.2",
-      "resolved": "https://registry.npmjs.org/sinon/-/sinon-19.0.2.tgz",
-      "integrity": "sha512-euuToqM+PjO4UgXeLETsfQiuoyPXlqFezr6YZDFwHR3t4qaX0fZUe1MfPMznTL5f8BWrVS89KduLdMUsxFCO6g==",
+      "version": "19.0.4",
+      "resolved": "https://registry.npmjs.org/sinon/-/sinon-19.0.4.tgz",
+      "integrity": "sha512-myidFob7fjmYHJb+CHNLtAYScxn3sngGq4t75L2rCGGpE/k4OQVkN3KE5FsN+XkO2+fcDZ65PGvq3KHrlLAm7g==",
       "dev": true,
       "dependencies": {
         "@sinonjs/commons": "^3.0.1",
-        "@sinonjs/fake-timers": "^13.0.2",
+        "@sinonjs/fake-timers": "^13.0.5",
         "@sinonjs/samsam": "^8.0.1",
         "diff": "^7.0.0",
         "nise": "^6.1.1",
@@ -5437,13 +5437,13 @@
       "dev": true
     },
     "sinon": {
-      "version": "19.0.2",
-      "resolved": "https://registry.npmjs.org/sinon/-/sinon-19.0.2.tgz",
-      "integrity": "sha512-euuToqM+PjO4UgXeLETsfQiuoyPXlqFezr6YZDFwHR3t4qaX0fZUe1MfPMznTL5f8BWrVS89KduLdMUsxFCO6g==",
+      "version": "19.0.4",
+      "resolved": "https://registry.npmjs.org/sinon/-/sinon-19.0.4.tgz",
+      "integrity": "sha512-myidFob7fjmYHJb+CHNLtAYScxn3sngGq4t75L2rCGGpE/k4OQVkN3KE5FsN+XkO2+fcDZ65PGvq3KHrlLAm7g==",
       "dev": true,
       "requires": {
         "@sinonjs/commons": "^3.0.1",
-        "@sinonjs/fake-timers": "^13.0.2",
+        "@sinonjs/fake-timers": "^13.0.5",
         "@sinonjs/samsam": "^8.0.1",
         "diff": "^7.0.0",
         "nise": "^6.1.1",
