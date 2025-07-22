@@ -8,12 +8,12 @@ agent:
     os_image: ubuntu2004
 
 blocks:
-  - name: Test with Node.js v22
+  - name: Test with Node.js v24
     task:
       prologue:
         commands:
           - checkout
-          - sem-version node 22
+          - sem-version node 24
           - cache restore
           - npm install
           - cache store
