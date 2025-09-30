@@ -33,22 +33,17 @@ npm install --global yaml-validator
 Usage as a part of a Node.js script:
 
 ```js
-const YamlValidator = require('yaml-validator');
+const YamlValidator = require("yaml-validator");
 
 // Default options
 const options = {
   log: false,
   structure: false,
   onWarning: null,
-  writeJson: false
+  writeJson: false,
 };
 
-const files = [
-  'file paths',
-  'that exists',
-  'somewhere',
-  'and are Yaml files'
-];
+const files = ["file paths", "that exists", "somewhere", "and are Yaml files"];
 
 const validator = new YamlValidator(options);
 validator.validate(files);
@@ -89,7 +84,6 @@ Default value: `false`
 In case the value is not `false`, the given string will be used as log file where all the
 task output is written.
 
-
 ### options.structure
 
 Type: `object`
@@ -97,7 +91,6 @@ Type: `object`
 Default value: `false`
 
 The most complex style of checking validity.
-
 
 ### options.onWarning
 
@@ -111,7 +104,6 @@ Please note that the `onWarning` callback is being used by this library and any 
 will be run after the one implemented in this library.
 The callback get called with two parameters, of which the first is the error in question,
 while the second is the file path of the given Yaml file.
-
 
 ### options.writeJson
 
@@ -138,31 +130,28 @@ properties, with the given types.
 
 The `teachers` array is made of strings, thus all items in that array must be a string.
 
-
 ```js
 const options = {
   structure: {
     school: {
-      'description?': 'string', //Optional, won't show in invalid array
-      code: 'number',
+      "description?": "string", //Optional, won't show in invalid array
+      code: "number",
       principal: {
-        name: 'string'
+        name: "string",
       },
       classRooms: [
         {
-          name: 'string',
-          id: 'number',
-          'location?':{
+          name: "string",
+          id: "number",
+          "location?": {
             floor: "string",
             building: "string",
-          }
-        }
+          },
+        },
       ],
-      teachers: [
-        'string'
-      ]
-    }
-  }
+      teachers: ["string"],
+    },
+  },
 };
 ```
 
@@ -173,8 +162,8 @@ Using the `options.onWarning` callback, the possible parsing errors can be retri
 ```js
 const options = {
   onWarning: function (error, filepath) {
-    console.log(filepath + ' has error: ' + error);
-  }
+    console.log(filepath + " has error: " + error);
+  },
 };
 ```
 
@@ -185,7 +174,7 @@ to be saved in JSON format, in the same file path as the original Yaml files.
 
 ```js
 const options = {
-  writeJson: true
+  writeJson: true,
 };
 ```
 
