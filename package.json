@@ -37,17 +37,17 @@
   ],
   "dependencies": {
     "check-type": "0.4.11",
-    "js-yaml": "4.1.0",
+    "js-yaml": "4.1.1",
     "optionator": "0.9.4"
   },
   "devDependencies": {
-    "@types/node": "24.6.0",
+    "@types/node": "24.10.1",
     "c8": "10.1.3",
-    "eslint": "9.36.0",
+    "eslint": "9.39.1",
     "eslint-config-paazmaya": "9.0.1",
     "eslint-plugin-n": "17.23.1",
     "sinon": "21.0.0",
     "tape": "5.9.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
