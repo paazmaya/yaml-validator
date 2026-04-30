@@ -5,6 +5,9 @@ It follows the guidance from https://keepachangelog.com/en/1.0.0/.
 
 ## Unreleased
 
+- Migrate linting from ESLint to Oxlint with nursery rules enabled
+- Remove ESLint, eslint-config-paazmaya, and related dependencies
+
 - Minimum supported Node.js version lifted from `18.12.0` to `24.12.0`
 
 ## `v5.1.0` (2023-08-07)
