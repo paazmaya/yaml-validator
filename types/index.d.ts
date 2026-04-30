@@ -19,7 +19,7 @@ declare class YamlValidatore {
      * @param {string} parent Address in a dot notation
      * @returns {Array} List of not found structure paths
      */
-    validateStructure(doc: Object, structure: Object, parent: string): any[];
+    validateStructure(doc: object, structure: object, parent: string): any[];
     /**
      * Parse the given Yaml data.
      * @param {string} filepath Yaml file path
