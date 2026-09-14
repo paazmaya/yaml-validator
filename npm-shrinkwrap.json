@@ -19,7 +19,7 @@
       "devDependencies": {
         "@types/node": "24.12.0",
         "c8": "10.1.3",
-        "oxlint": "1.67.0",
+        "oxlint": "1.83.0",
         "sinon": "21.0.2",
         "tape": "5.9.0",
         "typescript": "6.0.3"
@@ -200,9 +200,9 @@
       }
     },
     "node_modules/@oxlint/binding-android-arm-eabi": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm-eabi/-/binding-android-arm-eabi-1.67.0.tgz",
-      "integrity": "sha512-VrSi571rDv1N8HaEDM+DEX8nmT0y9jJo8tzzW13vsOWTx59xQczCIJx68n2zWOXRT5YKZsOZXp4qkHN/10x4mw==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm-eabi/-/binding-android-arm-eabi-1.83.0.tgz",
+      "integrity": "sha512-0yGY24EwsLk5YDe6F+VkmZyRHSwJDALa3nIrPpq7FXmp2lV2d0TzvBCGeZk+wgiULRGr5blhyr4QMp5KCXJUqA==",
       "cpu": [
         "arm"
       ],
@@ -216,9 +216,9 @@
       }
     },
     "node_modules/@oxlint/binding-android-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm64/-/binding-android-arm64-1.67.0.tgz",
-      "integrity": "sha512-l6+NdYxMoRohix5r5bbigW16LPicceCwGcQ6LKKuE1kUdjgFfQolJjrJsQYPFetIs78Gxj/G/f5TEGoTCwj9nQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm64/-/binding-android-arm64-1.83.0.tgz",
+      "integrity": "sha512-hHfJ0vc17A4iUjH5p9BsTUPYbYRNxGpvD2lbu1aBRk54bzNIx9o5TtYF39QPZcV95DagZd+4DEAw2RH3G2ZsMg==",
       "cpu": [
         "arm64"
       ],
@@ -232,9 +232,9 @@
       }
     },
     "node_modules/@oxlint/binding-darwin-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-arm64/-/binding-darwin-arm64-1.67.0.tgz",
-      "integrity": "sha512-jOzXxS1AxFxhImLIRbtGIMrEwaXcgMw3gR57WB1cRk8ai+vpr6726kxXqVvlNsrXtJ/FrmOm8RxlC0m8SW24Qg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-arm64/-/binding-darwin-arm64-1.83.0.tgz",
+      "integrity": "sha512-hsOjYjszLb/3zym/TkzUMPAoQlTJcuzSyEPOAyA+skXJIX9M0o+4JfOtqopX/Vf4hSLrJ98j0nvFo23gzk8auQ==",
       "cpu": [
         "arm64"
       ],
@@ -248,9 +248,9 @@
       }
     },
     "node_modules/@oxlint/binding-darwin-x64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-x64/-/binding-darwin-x64-1.67.0.tgz",
-      "integrity": "sha512-3DFAVY94OqjIZHXIPz37yGRSWwOFTAqChQ64/M69GYLawzP0KiwdhDNfqdKKYT0bTR/DNxmMnQsj3ns+8+X/Lg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-x64/-/binding-darwin-x64-1.83.0.tgz",
+      "integrity": "sha512-mjh5oH2EA+wl5yRJYT9K9G61O2zFlpuv+yf2JwZOi0+dq2FnTUtm1h8i+5Ik0fXPWIu/k84I1psZR9aQsLAnyA==",
       "cpu": [
         "x64"
       ],
@@ -264,9 +264,9 @@
       }
     },
     "node_modules/@oxlint/binding-freebsd-x64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-freebsd-x64/-/binding-freebsd-x64-1.67.0.tgz",
-      "integrity": "sha512-e4dDKZuLu8TR9DEBssWSDahlPgZBwojTTHZUvnjBRJfJJbpxYCjfjKfi0Z1+CSLMiJBwI2yCDtRM1XJQaARjmg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-freebsd-x64/-/binding-freebsd-x64-1.83.0.tgz",
+      "integrity": "sha512-fNHr64/YaO8YssuoDVC8+F4Uk5enR86q5uxfHkQrjAPs1dbAILOrD2uaud+J7MO8Fx774g44ERLD0IGIvZE48w==",
       "cpu": [
         "x64"
       ],
@@ -280,9 +280,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-arm-gnueabihf": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.67.0.tgz",
-      "integrity": "sha512-BKytFdcQzbITV3xlnzDUDTEDtbUMCCiC4EaNTDZ4FyT8gdNvBC4gfiLucXp/sQl0XU3p7syTlorUWVVVBZab2g==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.83.0.tgz",
+      "integrity": "sha512-Qpwy3zzAwMj+8/lyYItHmkSMwbkprFNWTK7jPYDOxSyxEhaSLOWYUTCMkjF334J8/WD0nznCCsoBbIH6hpsuIw==",
       "cpu": [
         "arm"
       ],
@@ -296,9 +296,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-arm-musleabihf": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-1.67.0.tgz",
-      "integrity": "sha512-XYAv0esBDX7BpTzRDjVX2Vdj+zndd8ll2dFQiaeQ6zTZr7A8GRDTN7fH3FP3jU+O0vCDx85oH/EtG7BzPgAXuw==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-1.83.0.tgz",
+      "integrity": "sha512-s+BirYLFq7JL2k9sP0XI3ZXJ9dYvJ8sX3jLCLoag7tt+zrSHpZxP0jqznfL+Gdgwu7ay0dYgGYJXrQvq3iWloA==",
       "cpu": [
         "arm"
       ],
@@ -312,9 +312,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-arm64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.67.0.tgz",
-      "integrity": "sha512-zizRMjA0i6u/2B0evgda04iycu+MoNuf1pBy6Eh+1CjC5wMEG7qN5zdDKTCvFc0KSYSDM9QTG3gjZHirgtQuKg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.83.0.tgz",
+      "integrity": "sha512-7lihXt3vKr+GIyapNbHrnFHm/biiW30le6Zv/DExbAFPF6YwCQXVFlONPFehxs0CpGO4CBfYPM9rdDT+XMoIlg==",
       "cpu": [
         "arm64"
       ],
@@ -328,9 +328,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-arm64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.67.0.tgz",
-      "integrity": "sha512-zB/Tf6sUjmmvvbva9Gj3JTJ8rJ9t4I8/U0o6vSRtd0DRIsIuyegBwJAzhSUFQHdMijIRJkW0exs/yBhpw2S20w==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.83.0.tgz",
+      "integrity": "sha512-q63JalLYVkZiZvls1z3PPUnpmQluOMXp0khqQMznCeAPLGydfNY8JhvuA4WlK57JfrvikU8wB5lPVveqpIXvew==",
       "cpu": [
         "arm64"
       ],
@@ -344,9 +344,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-ppc64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.67.0.tgz",
-      "integrity": "sha512-kgU40Gt74CK0TCsF51KZymkIwN9U0BajKsMijB52zPqOeZU9NAHkA/NSQkZDHEaCakx42DxhXkODiAqf2b4Gug==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.83.0.tgz",
+      "integrity": "sha512-krQmDF+dRbxvdqVPV88ZuOoPPu8X5BuqDA8Hd+qcS4YMRQCb+nexA57DazgGsc/rGdKBe3QmV0mnv0bdpW/p5g==",
       "cpu": [
         "ppc64"
       ],
@@ -360,9 +360,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-riscv64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-1.67.0.tgz",
-      "integrity": "sha512-tOYhkk/iaG9aD3FvGpBFd1Lrw0x0RaVoJBxjUkfNzS50rC5NS5BteNCwgr8A2zCdADrIIoze6D7u6U5Ic++/iQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-1.83.0.tgz",
+      "integrity": "sha512-MmOl8Y6txEAXZU1RG8Rr264jQ6D7VPmqFsU/45x/FeWsGe32hklTqGrLE6UxHzp5Rjt0wP+20tY8YXKgSFB3mw==",
       "cpu": [
         "riscv64"
       ],
@@ -376,9 +376,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-riscv64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-musl/-/binding-linux-riscv64-musl-1.67.0.tgz",
-      "integrity": "sha512-sEtywrPb+0b+tHYl1SDCrw903fiC4eyKoNqzP3v+f2JT3Xcv4NEYG+P8rj+eEnX7IWhqV/xj8/JmcmVj21CXaA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-musl/-/binding-linux-riscv64-musl-1.83.0.tgz",
+      "integrity": "sha512-u1rMymh0W3JZkq370kzQsYPULGWqhE09pZRqnZvUSoYaI9pVO5yVX+iYIslmWuEgwuzH9YAaOsScJiobWCHoOw==",
       "cpu": [
         "riscv64"
       ],
@@ -392,9 +392,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-s390x-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.67.0.tgz",
-      "integrity": "sha512-BvR8Moa0zCLxroOx4vZaZN9nUfwAUpSTwjZdxZyKy4bv3PrzrXrxKR/ZQ0L9wNSvlPhnMJeZfa3q5w6ZCTuN6Q==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.83.0.tgz",
+      "integrity": "sha512-y0zK3HNwGysu7rqtE+BQG/d0bx5gh/KwlOtghN8oWeK1KcWzeaLqtZrbm8owqdma1lFyrce/hTO5ismuNu+INQ==",
       "cpu": [
         "s390x"
       ],
@@ -408,9 +408,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-x64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.67.0.tgz",
-      "integrity": "sha512-mm2cxM6fksOpq6l0uFws8BUGKAR4dNa/cZCn37Npq7PFbhD5HDJqWfnoIvTaeRKMy5XdS2tO0MA0qbHDrnXAAA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.83.0.tgz",
+      "integrity": "sha512-rS5gM0NgD7ngmuJmbIehsidtrOwKkLFwCQbKEeb9KuyQrrWNq5Zkn0uV6AYdXOMJ0grrWEiLwBuvMxt8w5vsNw==",
       "cpu": [
         "x64"
       ],
@@ -424,9 +424,9 @@
       }
     },
     "node_modules/@oxlint/binding-linux-x64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-musl/-/binding-linux-x64-musl-1.67.0.tgz",
-      "integrity": "sha512-WmbMuLapKyDlobMkXAaAL0Y+Uczh4LETfIfQsUpbId4Ip8Ai82/jqeYTOoUCkuuhBFapgqP253+d83tLKOksJg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-musl/-/binding-linux-x64-musl-1.83.0.tgz",
+      "integrity": "sha512-W2IH4EtpcPaWcvNGCA95YoDg4vxqE/ZiPCi3arrxEEpsK7+JQN9WYwrlYFx9pcdP6KPXqRqkv3zdQPHcx7b6YQ==",
       "cpu": [
         "x64"
       ],
@@ -440,9 +440,9 @@
       }
     },
     "node_modules/@oxlint/binding-openharmony-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-openharmony-arm64/-/binding-openharmony-arm64-1.67.0.tgz",
-      "integrity": "sha512-9g/PqxYJelzzTAOR5Y+RiRqdeydhEuXv2KxNeFcAKQ7UsvnWSY1OP4MsuPMbTO2Pf70tz7mFhl1j13H3fyh+8g==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-openharmony-arm64/-/binding-openharmony-arm64-1.83.0.tgz",
+      "integrity": "sha512-6LyKkUyoajssTPLlZmDbZIbu4IZ5B4bGuRUnBgCGpEvHP3FQMaYITncHA/unPUo7q+Z+pIu2HhdkQ+8d1SG7iA==",
       "cpu": [
         "arm64"
       ],
@@ -456,9 +456,9 @@
       }
     },
     "node_modules/@oxlint/binding-win32-arm64-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.67.0.tgz",
-      "integrity": "sha512-2VhwE6Gatb0vJGnN0TBuQMbKCOiZlSQ/zJvVWYLK4a9d4iDiJOen/yVQkGpmsJ90MuH66fzi0kEKI0jRQMDxGA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.83.0.tgz",
+      "integrity": "sha512-Uz/fObEtF0jmNJQJ8CGRBKfefYstS0/wjD3s6IGzP8nUwsJykHQJBiN3npHwKiGRGn/vvBEgNr4B3cCzmmatvg==",
       "cpu": [
         "arm64"
       ],
@@ -472,9 +472,9 @@
       }
     },
     "node_modules/@oxlint/binding-win32-ia32-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-1.67.0.tgz",
-      "integrity": "sha512-EQ3VExXfeM1InbE5+JjufhZZTWy+kHUwgt3yZR7gQ47Je/mE0WspQPan0OJznh493L5anM210YNJtH1PXjTSFg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-1.83.0.tgz",
+      "integrity": "sha512-u7XcvPW6Bk58tY5iWs2ESb0vJjoE/kuSpHxopbwp/p3ZtWVQXZ6wor5w3ssVTHOqd/v8b+QdhSFWQ4grEUNWpA==",
       "cpu": [
         "ia32"
       ],
@@ -488,9 +488,9 @@
       }
     },
     "node_modules/@oxlint/binding-win32-x64-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.67.0.tgz",
-      "integrity": "sha512-bw24y+/1MHS4QDkons3YyHkPT9uCMoLHHgQhb+mb8NOjTYwub1CZ+K9Ngr8aO5DMrDrkqHwTzlTwFP2vS8Y/ZQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.83.0.tgz",
+      "integrity": "sha512-LZRubd7ph13QmAg4fFecTYVZkiYbROR2Htaxh/ufWRkDhPOm2wrwaEYR89e0YpPFD3dqBrPoxS7myBw5hmYA7Q==",
       "cpu": [
         "x64"
       ],
@@ -2072,9 +2072,9 @@
       }
     },
     "node_modules/oxlint": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/oxlint/-/oxlint-1.67.0.tgz",
-      "integrity": "sha512-blwwaHPdoH8piQ5/z0KHeoHFR7FZgl12WluKJfu4qFLPkZl6mK04PkLE45Fw1NxfBRSlh40Gu7MkxHUw++ociQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/oxlint/-/oxlint-1.83.0.tgz",
+      "integrity": "sha512-cyDzSzaw3uzP0TeCeq3lLRPPoaUxkbB4ZOXj+kn+5r+BX9V+4bNVGk9lxer+WrgcpebH4JxLlJ3KQjveVztOLQ==",
       "dev": true,
       "bin": {
         "oxlint": "bin/oxlint"
@@ -2083,31 +2083,31 @@
         "node": "^20.19.0 || >=22.12.0"
       },
       "funding": {
-        "url": "https://github.com/sponsors/Boshen"
+        "url": "https://github.com/sponsors/oxc-project"
       },
       "optionalDependencies": {
-        "@oxlint/binding-android-arm-eabi": "1.67.0",
-        "@oxlint/binding-android-arm64": "1.67.0",
-        "@oxlint/binding-darwin-arm64": "1.67.0",
-        "@oxlint/binding-darwin-x64": "1.67.0",
-        "@oxlint/binding-freebsd-x64": "1.67.0",
-        "@oxlint/binding-linux-arm-gnueabihf": "1.67.0",
-        "@oxlint/binding-linux-arm-musleabihf": "1.67.0",
-        "@oxlint/binding-linux-arm64-gnu": "1.67.0",
-        "@oxlint/binding-linux-arm64-musl": "1.67.0",
-        "@oxlint/binding-linux-ppc64-gnu": "1.67.0",
-        "@oxlint/binding-linux-riscv64-gnu": "1.67.0",
-        "@oxlint/binding-linux-riscv64-musl": "1.67.0",
-        "@oxlint/binding-linux-s390x-gnu": "1.67.0",
-        "@oxlint/binding-linux-x64-gnu": "1.67.0",
-        "@oxlint/binding-linux-x64-musl": "1.67.0",
-        "@oxlint/binding-openharmony-arm64": "1.67.0",
-        "@oxlint/binding-win32-arm64-msvc": "1.67.0",
-        "@oxlint/binding-win32-ia32-msvc": "1.67.0",
-        "@oxlint/binding-win32-x64-msvc": "1.67.0"
+        "@oxlint/binding-android-arm-eabi": "1.83.0",
+        "@oxlint/binding-android-arm64": "1.83.0",
+        "@oxlint/binding-darwin-arm64": "1.83.0",
+        "@oxlint/binding-darwin-x64": "1.83.0",
+        "@oxlint/binding-freebsd-x64": "1.83.0",
+        "@oxlint/binding-linux-arm-gnueabihf": "1.83.0",
+        "@oxlint/binding-linux-arm-musleabihf": "1.83.0",
+        "@oxlint/binding-linux-arm64-gnu": "1.83.0",
+        "@oxlint/binding-linux-arm64-musl": "1.83.0",
+        "@oxlint/binding-linux-ppc64-gnu": "1.83.0",
+        "@oxlint/binding-linux-riscv64-gnu": "1.83.0",
+        "@oxlint/binding-linux-riscv64-musl": "1.83.0",
+        "@oxlint/binding-linux-s390x-gnu": "1.83.0",
+        "@oxlint/binding-linux-x64-gnu": "1.83.0",
+        "@oxlint/binding-linux-x64-musl": "1.83.0",
+        "@oxlint/binding-openharmony-arm64": "1.83.0",
+        "@oxlint/binding-win32-arm64-msvc": "1.83.0",
+        "@oxlint/binding-win32-ia32-msvc": "1.83.0",
+        "@oxlint/binding-win32-x64-msvc": "1.83.0"
       },
       "peerDependencies": {
-        "oxlint-tsgolint": ">=0.22.1",
+        "oxlint-tsgolint": ">=7.0.2001",
         "vite-plus": "*"
       },
       "peerDependenciesMeta": {
@@ -3144,135 +3144,135 @@
       }
     },
     "@oxlint/binding-android-arm-eabi": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm-eabi/-/binding-android-arm-eabi-1.67.0.tgz",
-      "integrity": "sha512-VrSi571rDv1N8HaEDM+DEX8nmT0y9jJo8tzzW13vsOWTx59xQczCIJx68n2zWOXRT5YKZsOZXp4qkHN/10x4mw==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm-eabi/-/binding-android-arm-eabi-1.83.0.tgz",
+      "integrity": "sha512-0yGY24EwsLk5YDe6F+VkmZyRHSwJDALa3nIrPpq7FXmp2lV2d0TzvBCGeZk+wgiULRGr5blhyr4QMp5KCXJUqA==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-android-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm64/-/binding-android-arm64-1.67.0.tgz",
-      "integrity": "sha512-l6+NdYxMoRohix5r5bbigW16LPicceCwGcQ6LKKuE1kUdjgFfQolJjrJsQYPFetIs78Gxj/G/f5TEGoTCwj9nQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-android-arm64/-/binding-android-arm64-1.83.0.tgz",
+      "integrity": "sha512-hHfJ0vc17A4iUjH5p9BsTUPYbYRNxGpvD2lbu1aBRk54bzNIx9o5TtYF39QPZcV95DagZd+4DEAw2RH3G2ZsMg==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-darwin-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-arm64/-/binding-darwin-arm64-1.67.0.tgz",
-      "integrity": "sha512-jOzXxS1AxFxhImLIRbtGIMrEwaXcgMw3gR57WB1cRk8ai+vpr6726kxXqVvlNsrXtJ/FrmOm8RxlC0m8SW24Qg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-arm64/-/binding-darwin-arm64-1.83.0.tgz",
+      "integrity": "sha512-hsOjYjszLb/3zym/TkzUMPAoQlTJcuzSyEPOAyA+skXJIX9M0o+4JfOtqopX/Vf4hSLrJ98j0nvFo23gzk8auQ==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-darwin-x64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-x64/-/binding-darwin-x64-1.67.0.tgz",
-      "integrity": "sha512-3DFAVY94OqjIZHXIPz37yGRSWwOFTAqChQ64/M69GYLawzP0KiwdhDNfqdKKYT0bTR/DNxmMnQsj3ns+8+X/Lg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-darwin-x64/-/binding-darwin-x64-1.83.0.tgz",
+      "integrity": "sha512-mjh5oH2EA+wl5yRJYT9K9G61O2zFlpuv+yf2JwZOi0+dq2FnTUtm1h8i+5Ik0fXPWIu/k84I1psZR9aQsLAnyA==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-freebsd-x64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-freebsd-x64/-/binding-freebsd-x64-1.67.0.tgz",
-      "integrity": "sha512-e4dDKZuLu8TR9DEBssWSDahlPgZBwojTTHZUvnjBRJfJJbpxYCjfjKfi0Z1+CSLMiJBwI2yCDtRM1XJQaARjmg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-freebsd-x64/-/binding-freebsd-x64-1.83.0.tgz",
+      "integrity": "sha512-fNHr64/YaO8YssuoDVC8+F4Uk5enR86q5uxfHkQrjAPs1dbAILOrD2uaud+J7MO8Fx774g44ERLD0IGIvZE48w==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-arm-gnueabihf": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.67.0.tgz",
-      "integrity": "sha512-BKytFdcQzbITV3xlnzDUDTEDtbUMCCiC4EaNTDZ4FyT8gdNvBC4gfiLucXp/sQl0XU3p7syTlorUWVVVBZab2g==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.83.0.tgz",
+      "integrity": "sha512-Qpwy3zzAwMj+8/lyYItHmkSMwbkprFNWTK7jPYDOxSyxEhaSLOWYUTCMkjF334J8/WD0nznCCsoBbIH6hpsuIw==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-arm-musleabihf": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-1.67.0.tgz",
-      "integrity": "sha512-XYAv0esBDX7BpTzRDjVX2Vdj+zndd8ll2dFQiaeQ6zTZr7A8GRDTN7fH3FP3jU+O0vCDx85oH/EtG7BzPgAXuw==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-1.83.0.tgz",
+      "integrity": "sha512-s+BirYLFq7JL2k9sP0XI3ZXJ9dYvJ8sX3jLCLoag7tt+zrSHpZxP0jqznfL+Gdgwu7ay0dYgGYJXrQvq3iWloA==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-arm64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.67.0.tgz",
-      "integrity": "sha512-zizRMjA0i6u/2B0evgda04iycu+MoNuf1pBy6Eh+1CjC5wMEG7qN5zdDKTCvFc0KSYSDM9QTG3gjZHirgtQuKg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.83.0.tgz",
+      "integrity": "sha512-7lihXt3vKr+GIyapNbHrnFHm/biiW30le6Zv/DExbAFPF6YwCQXVFlONPFehxs0CpGO4CBfYPM9rdDT+XMoIlg==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-arm64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.67.0.tgz",
-      "integrity": "sha512-zB/Tf6sUjmmvvbva9Gj3JTJ8rJ9t4I8/U0o6vSRtd0DRIsIuyegBwJAzhSUFQHdMijIRJkW0exs/yBhpw2S20w==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-arm64-musl/-/binding-linux-arm64-musl-1.83.0.tgz",
+      "integrity": "sha512-q63JalLYVkZiZvls1z3PPUnpmQluOMXp0khqQMznCeAPLGydfNY8JhvuA4WlK57JfrvikU8wB5lPVveqpIXvew==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-ppc64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.67.0.tgz",
-      "integrity": "sha512-kgU40Gt74CK0TCsF51KZymkIwN9U0BajKsMijB52zPqOeZU9NAHkA/NSQkZDHEaCakx42DxhXkODiAqf2b4Gug==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.83.0.tgz",
+      "integrity": "sha512-krQmDF+dRbxvdqVPV88ZuOoPPu8X5BuqDA8Hd+qcS4YMRQCb+nexA57DazgGsc/rGdKBe3QmV0mnv0bdpW/p5g==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-riscv64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-1.67.0.tgz",
-      "integrity": "sha512-tOYhkk/iaG9aD3FvGpBFd1Lrw0x0RaVoJBxjUkfNzS50rC5NS5BteNCwgr8A2zCdADrIIoze6D7u6U5Ic++/iQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-1.83.0.tgz",
+      "integrity": "sha512-MmOl8Y6txEAXZU1RG8Rr264jQ6D7VPmqFsU/45x/FeWsGe32hklTqGrLE6UxHzp5Rjt0wP+20tY8YXKgSFB3mw==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-riscv64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-musl/-/binding-linux-riscv64-musl-1.67.0.tgz",
-      "integrity": "sha512-sEtywrPb+0b+tHYl1SDCrw903fiC4eyKoNqzP3v+f2JT3Xcv4NEYG+P8rj+eEnX7IWhqV/xj8/JmcmVj21CXaA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-riscv64-musl/-/binding-linux-riscv64-musl-1.83.0.tgz",
+      "integrity": "sha512-u1rMymh0W3JZkq370kzQsYPULGWqhE09pZRqnZvUSoYaI9pVO5yVX+iYIslmWuEgwuzH9YAaOsScJiobWCHoOw==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-s390x-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.67.0.tgz",
-      "integrity": "sha512-BvR8Moa0zCLxroOx4vZaZN9nUfwAUpSTwjZdxZyKy4bv3PrzrXrxKR/ZQ0L9wNSvlPhnMJeZfa3q5w6ZCTuN6Q==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.83.0.tgz",
+      "integrity": "sha512-y0zK3HNwGysu7rqtE+BQG/d0bx5gh/KwlOtghN8oWeK1KcWzeaLqtZrbm8owqdma1lFyrce/hTO5ismuNu+INQ==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-x64-gnu": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.67.0.tgz",
-      "integrity": "sha512-mm2cxM6fksOpq6l0uFws8BUGKAR4dNa/cZCn37Npq7PFbhD5HDJqWfnoIvTaeRKMy5XdS2tO0MA0qbHDrnXAAA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.83.0.tgz",
+      "integrity": "sha512-rS5gM0NgD7ngmuJmbIehsidtrOwKkLFwCQbKEeb9KuyQrrWNq5Zkn0uV6AYdXOMJ0grrWEiLwBuvMxt8w5vsNw==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-linux-x64-musl": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-musl/-/binding-linux-x64-musl-1.67.0.tgz",
-      "integrity": "sha512-WmbMuLapKyDlobMkXAaAL0Y+Uczh4LETfIfQsUpbId4Ip8Ai82/jqeYTOoUCkuuhBFapgqP253+d83tLKOksJg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-linux-x64-musl/-/binding-linux-x64-musl-1.83.0.tgz",
+      "integrity": "sha512-W2IH4EtpcPaWcvNGCA95YoDg4vxqE/ZiPCi3arrxEEpsK7+JQN9WYwrlYFx9pcdP6KPXqRqkv3zdQPHcx7b6YQ==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-openharmony-arm64": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-openharmony-arm64/-/binding-openharmony-arm64-1.67.0.tgz",
-      "integrity": "sha512-9g/PqxYJelzzTAOR5Y+RiRqdeydhEuXv2KxNeFcAKQ7UsvnWSY1OP4MsuPMbTO2Pf70tz7mFhl1j13H3fyh+8g==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-openharmony-arm64/-/binding-openharmony-arm64-1.83.0.tgz",
+      "integrity": "sha512-6LyKkUyoajssTPLlZmDbZIbu4IZ5B4bGuRUnBgCGpEvHP3FQMaYITncHA/unPUo7q+Z+pIu2HhdkQ+8d1SG7iA==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-win32-arm64-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.67.0.tgz",
-      "integrity": "sha512-2VhwE6Gatb0vJGnN0TBuQMbKCOiZlSQ/zJvVWYLK4a9d4iDiJOen/yVQkGpmsJ90MuH66fzi0kEKI0jRQMDxGA==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.83.0.tgz",
+      "integrity": "sha512-Uz/fObEtF0jmNJQJ8CGRBKfefYstS0/wjD3s6IGzP8nUwsJykHQJBiN3npHwKiGRGn/vvBEgNr4B3cCzmmatvg==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-win32-ia32-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-1.67.0.tgz",
-      "integrity": "sha512-EQ3VExXfeM1InbE5+JjufhZZTWy+kHUwgt3yZR7gQ47Je/mE0WspQPan0OJznh493L5anM210YNJtH1PXjTSFg==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-ia32-msvc/-/binding-win32-ia32-msvc-1.83.0.tgz",
+      "integrity": "sha512-u7XcvPW6Bk58tY5iWs2ESb0vJjoE/kuSpHxopbwp/p3ZtWVQXZ6wor5w3ssVTHOqd/v8b+QdhSFWQ4grEUNWpA==",
       "dev": true,
       "optional": true
     },
     "@oxlint/binding-win32-x64-msvc": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.67.0.tgz",
-      "integrity": "sha512-bw24y+/1MHS4QDkons3YyHkPT9uCMoLHHgQhb+mb8NOjTYwub1CZ+K9Ngr8aO5DMrDrkqHwTzlTwFP2vS8Y/ZQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/@oxlint/binding-win32-x64-msvc/-/binding-win32-x64-msvc-1.83.0.tgz",
+      "integrity": "sha512-LZRubd7ph13QmAg4fFecTYVZkiYbROR2Htaxh/ufWRkDhPOm2wrwaEYR89e0YpPFD3dqBrPoxS7myBw5hmYA7Q==",
       "dev": true,
       "optional": true
     },
@@ -4393,30 +4393,30 @@
       }
     },
     "oxlint": {
-      "version": "1.67.0",
-      "resolved": "https://registry.npmjs.org/oxlint/-/oxlint-1.67.0.tgz",
-      "integrity": "sha512-blwwaHPdoH8piQ5/z0KHeoHFR7FZgl12WluKJfu4qFLPkZl6mK04PkLE45Fw1NxfBRSlh40Gu7MkxHUw++ociQ==",
+      "version": "1.83.0",
+      "resolved": "https://registry.npmjs.org/oxlint/-/oxlint-1.83.0.tgz",
+      "integrity": "sha512-cyDzSzaw3uzP0TeCeq3lLRPPoaUxkbB4ZOXj+kn+5r+BX9V+4bNVGk9lxer+WrgcpebH4JxLlJ3KQjveVztOLQ==",
       "dev": true,
       "requires": {
-        "@oxlint/binding-android-arm-eabi": "1.67.0",
-        "@oxlint/binding-android-arm64": "1.67.0",
-        "@oxlint/binding-darwin-arm64": "1.67.0",
-        "@oxlint/binding-darwin-x64": "1.67.0",
-        "@oxlint/binding-freebsd-x64": "1.67.0",
-        "@oxlint/binding-linux-arm-gnueabihf": "1.67.0",
-        "@oxlint/binding-linux-arm-musleabihf": "1.67.0",
-        "@oxlint/binding-linux-arm64-gnu": "1.67.0",
-        "@oxlint/binding-linux-arm64-musl": "1.67.0",
-        "@oxlint/binding-linux-ppc64-gnu": "1.67.0",
-        "@oxlint/binding-linux-riscv64-gnu": "1.67.0",
-        "@oxlint/binding-linux-riscv64-musl": "1.67.0",
-        "@oxlint/binding-linux-s390x-gnu": "1.67.0",
-        "@oxlint/binding-linux-x64-gnu": "1.67.0",
-        "@oxlint/binding-linux-x64-musl": "1.67.0",
-        "@oxlint/binding-openharmony-arm64": "1.67.0",
-        "@oxlint/binding-win32-arm64-msvc": "1.67.0",
-        "@oxlint/binding-win32-ia32-msvc": "1.67.0",
-        "@oxlint/binding-win32-x64-msvc": "1.67.0"
+        "@oxlint/binding-android-arm-eabi": "1.83.0",
+        "@oxlint/binding-android-arm64": "1.83.0",
+        "@oxlint/binding-darwin-arm64": "1.83.0",
+        "@oxlint/binding-darwin-x64": "1.83.0",
+        "@oxlint/binding-freebsd-x64": "1.83.0",
+        "@oxlint/binding-linux-arm-gnueabihf": "1.83.0",
+        "@oxlint/binding-linux-arm-musleabihf": "1.83.0",
+        "@oxlint/binding-linux-arm64-gnu": "1.83.0",
+        "@oxlint/binding-linux-arm64-musl": "1.83.0",
+        "@oxlint/binding-linux-ppc64-gnu": "1.83.0",
+        "@oxlint/binding-linux-riscv64-gnu": "1.83.0",
+        "@oxlint/binding-linux-riscv64-musl": "1.83.0",
+        "@oxlint/binding-linux-s390x-gnu": "1.83.0",
+        "@oxlint/binding-linux-x64-gnu": "1.83.0",
+        "@oxlint/binding-linux-x64-musl": "1.83.0",
+        "@oxlint/binding-openharmony-arm64": "1.83.0",
+        "@oxlint/binding-win32-arm64-msvc": "1.83.0",
+        "@oxlint/binding-win32-ia32-msvc": "1.83.0",
+        "@oxlint/binding-win32-x64-msvc": "1.83.0"
       }
     },
     "p-limit": {
