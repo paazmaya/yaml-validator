@@ -18,22 +18,31 @@
     "type": "git",
     "url": "git+https://github.com/paazmaya/yaml-validator.git"
   },
-  "author": "Juga Paazmaya <paazmaya@yahoo.com> (https://paazmaya.fi)",
+  "author": {
+    "name": "Juga Paazmaya",
+    "email": "paazmaya@yahoo.com",
+    "url": "https://paazmaya.fi"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paazmaya/yaml-validator/issues"
   },
-  "homepage": "https://github.com/paazmaya/yaml-validator#readme",
+  "homepage": "https://github.com/paazmaya/yaml-validator",
   "engines": {
     "node": ">=24.12.0"
   },
+  "keywords": [
+    "yaml",
+    "validator",
+    "validate",
+    "structure",
+    "schema"
+  ],
   "files": [
     "bin",
     "types",
     "index.js",
-    "LICENSE",
-    "npm-shrinkwrap.json",
-    "package.json"
+    "npm-shrinkwrap.json"
   ],
   "dependencies": {
     "check-type": "0.4.11",

@@ -14,9 +14,9 @@ blocks:
         commands:
           - checkout
           - sem-version node 24
-          - cache restore
-          - npm install
-          - cache store
+          - cache restore node-modules-$(checksum npm-shrinkwrap.json)
+          - npm ci --ignore-scripts
+          - cache store node-modules-$(checksum npm-shrinkwrap.json) node_modules
       secrets:
         - name: codecov.io
       jobs:
@@ -28,6 +28,8 @@ blocks:
           commands:
             - npm test
             - npm run coverage
-            - curl -Os https://cli.codecov.io/latest/linux/codecov
+            - curl -fsSL -O https://cli.codecov.io/v11.2.6/linux/codecov
+            - curl -fsSL -O https://cli.codecov.io/v11.2.6/linux/codecov.SHA256SUM
+            - sha256sum -c codecov.SHA256SUM
             - chmod +x codecov
             - ./codecov upload-process -t $CODECOV_TOKEN

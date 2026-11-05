@@ -3,11 +3,15 @@
   "extends": [
     "config:recommended"
   ],
+  "minimumReleaseAge": "5 days",
   "commitBody": "Signed-off-by: {{{gitAuthor}}}",
   "automerge": true,
   "labels": [
     "dependencies"
   ],
+  "minor": {
+    "automerge": true
+  },
   "major": {
     "automerge": false
   }
