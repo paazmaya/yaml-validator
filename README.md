@@ -7,7 +7,7 @@
 [![code coverage](https://codecov.io/gh/paazmaya/yaml-validator/branch/main/graph/badge.svg)](https://codecov.io/gh/paazmaya/yaml-validator)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=paazmaya_yaml-validator&metric=code_smells)](https://sonarcloud.io/dashboard?id=paazmaya_yaml-validator)
 
-[Yaml](http://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
+[Yaml](https://yaml.org/) files are parsed via [`js-yaml`](https://github.com/nodeca/js-yaml)
 and the structure defined in the configuration options is enforced with
 [`check-type`](https://github.com/alistairjcbrown/check-type).
 
@@ -180,17 +180,17 @@ const options = {
 
 ## Contributing
 
-["A Beginner's Guide to Open Source: The Best Advice for Making your First Contribution"](http://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-the-best-advice-for-making-your-first-contribution/).
+["A Beginner's Guide to Open Source: The Best Advice for Making your First Contribution"](https://www.erikaheidi.com/blog/a-beginners-guide-to-open-source-the-best-advice-for-making-your-first-contribution/).
 
 [Also there is a blog post about "45 Github Issues Dos and Don’ts"](https://davidwalsh.name/45-github-issues-dos-donts).
 
-Linting is done with [ESLint](http://eslint.org) and can be executed with `npm run lint`.
+Linting is done with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) and can be executed with `npm run lint`.
 There should be no errors appearing after any JavaScript file changes.
 
 Please note that any features or changed will not be merged without working unit tests.
 
 Unit tests are written with [`tape`](https://github.com/substack/tape) and can be executed with `npm test`.
-Code coverage is inspected with [`nyc`](https://github.com/istanbuljs/nyc) and
+Code coverage is inspected with [`c8`](https://github.com/bcoe/c8) and
 can be executed with `npm run coverage` after running `npm test`.
 Please make sure it is over 90% at all times.
 
